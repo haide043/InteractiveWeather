@@ -76,10 +76,10 @@ getWeatherDataFromJSON <- function(weatherJSON) {
     weatherOzone = JSONList$daily$data[[1]]$ozone
   }
   
-  weatherDF = as.data.frame(rbind(c(weatherCloudCover,weatherVisibillity,weatherWindBearing,
+  weatherDF = cbind.data.frame(weatherCloudCover,weatherVisibillity,weatherWindBearing,
                                     weatherWindSpeed,weatherHumidity,weatherDewPoint,weatherTempMax,
                                     weatherTempMin,weatherPrecip,weatherMoonPhase,weatherSunset,
-                                    weatherSunrise,weatherIcon,weatherSummary, weatherPressure, weatherOzone)))
+                                    weatherSunrise,weatherIcon,weatherSummary, weatherPressure, weatherOzone)
   
   colnames(weatherDF) = col.names = c('weatherCloudCover','weatherVisibillity','weatherWindBearing',
                                       'weatherWindSpeed','weatherHumidity','weatherDewPoint','weatherTempMax',
@@ -97,7 +97,7 @@ last7Days = function(latitude, longitude){
   for(i in 1:7){
     newDay = currentTime[i] - epoch
     currentTime = append(currentTime, newDay)
-    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/",APIKey,"/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
+    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
     JSONData = getWeatherDataFromJSON(weatherJSON)
     JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
     weatherDataFrame = rbind(weatherDataFrame, JSONData)
