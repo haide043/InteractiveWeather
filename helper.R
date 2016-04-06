@@ -88,7 +88,7 @@ getWeatherDataFromJSON <- function(weatherJSON) {
   return(weatherDF)
 }
 
-last7Days = function(){
+last7Days = function(latitude, longitude){
   weatherDataFrame = NULL
   
   currentTime = c(as.numeric(as.POSIXct(Sys.time())))
@@ -97,8 +97,9 @@ last7Days = function(){
   for(i in 1:7){
     newDay = currentTime[i] - epoch
     currentTime = append(currentTime, newDay)
-    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/",APIKey,"/",clat, ",",clng,",",as.integer(currentTime[i]), sep=""))
+    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/",APIKey,"/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
     JSONData = getWeatherDataFromJSON(weatherJSON)
+    JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
     weatherDataFrame = rbind(weatherDataFrame, JSONData)
   }
   return(weatherDataFrame)
