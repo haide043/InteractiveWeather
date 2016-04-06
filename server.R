@@ -2,8 +2,9 @@
 library(shiny)
 library(leaflet)
 library(ggmap)
+source('helper.R')
 
-greenLeafIcon <- makeIcon(
+lightningtBoltIcon <- makeIcon(
   iconUrl = "http://emojipedia-us.s3.amazonaws.com/cache/11/d9/11d9507d9aec50e2758c0759e231a95a.png",
   iconWidth = 38, iconHeight = 95,
   iconAnchorX = 22, iconAnchorY = 94
@@ -19,7 +20,7 @@ shinyServer(function(input, output, session) {
     clng <<- click$lng
     address = revgeocode(c(clng,clat))
     leafletProxy("mymap") %>% clearMarkers()
-    leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat, icon =greenLeafIcon)
+    leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat, icon = lightningtBoltIcon)
   })
   
 })
