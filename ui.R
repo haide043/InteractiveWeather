@@ -18,8 +18,8 @@ shinyUI(
              fluidRow(
                column(3, 
                       selectInput("timeSelect", label = h3("Select a duration of time"),
-                                  choices = list("Past 7 days" = "7", "Past 30 days" = "30"),
-                                  selected = "7"),
+                                  choices = list("Past 7 days" = "past 7", "Past 30 days" = "past 30", "Next 7 days" ="next 7"),
+                                  selected = "next 7"),
                       
                       checkboxGroupInput("plotChoice", "Select a Weather Variable to Display",
                                    c("Temperature" = "temp",

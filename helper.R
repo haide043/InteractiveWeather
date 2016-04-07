@@ -185,13 +185,8 @@ getWeatherDataFromJSONFuture <- function(weatherJSON) {
 
 next7Days = function(latitude, longitude){
   weatherDataFrame = NULL
-  
-  for(i in 1:2){
     weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude, sep=""))
-    JSONData = getWeatherDataFromJSONFuture(weatherJSON)
-    JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
-    weatherDataFrame = rbind(weatherDataFrame, JSONData)
-  }
+    weatherDataFrame = getWeatherDataFromJSONFuture(weatherJSON)
   return(weatherDataFrame)
 }
 
