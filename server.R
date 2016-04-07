@@ -4,6 +4,9 @@ library(leaflet)
 library(ggmap)
 source('helper.R')
 
+clat = NULL
+clng = NULL
+
 TemperatureTheme <- theme_grey() + theme(plot.title = element_text(family = "Times", face = "bold", colour = "Black", size = rel(2)), 
                                      axis.title = element_text(family = "Times", size= rel(2)))
 
@@ -16,8 +19,8 @@ shinyServer(function(input, output, session) {
   
   observeEvent(input$mymap_click, {
     click = input$mymap_click
-    clat <- click$lat
-    clng <- click$lng
+    clat <<- click$lat
+    clng <<- click$lng
     
     if(input$timeSelect =="7"){
       weatherValues$weather = last7Days(clat, clng)
@@ -29,6 +32,19 @@ shinyServer(function(input, output, session) {
     leafletProxy("mymap") %>% clearMarkers()
     leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat)
     })
+  
+  observeEvent(input$timeSelect,{
+    print(c("observed",clat))
+    if(!is.null(clat)){
+      if(input$timeSelect =="7"){
+        weatherValues$weather = last7Days(clat, clng)
+      }
+      else if(input$timeSelect == "30"){
+        weatherValues$weather = last30Days(clat, clng)
+      }
+    }
+    else{}
+  })
   
   weatherValues = reactiveValues(weather = NULL)
     
