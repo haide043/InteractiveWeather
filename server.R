@@ -34,7 +34,6 @@ shinyServer(function(input, output, session) {
     })
   
   observeEvent(input$timeSelect,{
-    print(c("observed",clat))
     if(!is.null(clat)){
       if(input$timeSelect =="7"){
         weatherValues$weather = last7Days(clat, clng)
@@ -50,63 +49,84 @@ shinyServer(function(input, output, session) {
     
    
   plotType = eventReactive(input$plotChoice, {
-       output$weatherPlot = renderPlot({
-          if(!is.null(weatherValues$weather)){
-            weatherData = weatherValues$weather
-            if(input$plotChoice == "temp"){
+    print(input$plotChoice)
+    if("wind" %in% input$plotChoice){
+      output$windPlot = renderPlot({
+        if(!is.null(weatherValues$weather)){
+          weatherData = weatherValues$weather
+          ggplot(weatherData, aes(weatherDate, group = 2))+
+            geom_line(aes(y = weatherWindSpeed, colour = "Wind Speed")) +
+            labs(x = "\nDate", y = "Wind Speed\n",title =paste("Wind Speed for the Last",input$timeSelect,"Days")) +
+            TemperatureTheme + scale_color_discrete(name = "Wind Speed")
+        }
+      })
+    }
+    if("humid" %in% input$plotChoice){
+      output$humidPlot = renderPlot({
+        if(!is.null(weatherValues$weather)){
+          weatherData = weatherValues$weather
+          ggplot(weatherData, aes(weatherDate, group = 2))+
+            geom_line(aes(y = weatherHumidity, colour = "Humidity")) +
+            labs(x = "\nDate", y = "Humidity\n",title = "Humidity for the Last 7 Days") +
+            TemperatureTheme + scale_color_discrete(name = "Humidity")
+        }
+      })
+    }
+    if("precip" %in% input$plotChoice){
+      output$precipPlot = renderPlot({
+        if(!is.null(weatherValues$weather)){
+          weatherData = weatherValues$weather
+          ggplot(weatherData, aes(weatherDate, group = 2))+
+            geom_line(aes(y = weatherPrecip, colour = "Precipitation per Hour")) +
+            labs(x = "\nDate", y = "Precipitation\n",title = "Precipitation for the Last 7 Days") +
+            TemperatureTheme + scale_color_discrete(name = "Precipitation")
+        }
+      })
+    }
+    if("temp" %in% input$plotChoice){
+      output$temperaturePlot = renderPlot({
+        if(!is.null(weatherValues$weather)){
+          weatherData = weatherValues$weather
+          ggplot(weatherData, aes(weatherDate, group = 2))+
+            geom_line(aes(y = weatherTempMax, colour = "Maximum")) +
+            geom_line(aes(y = weatherTempMin, colour = "Minimum")) +
+            labs(x = "\nDate", y = "Temperature\n",title = "Temperature for the Last 7 Days") +
+            TemperatureTheme + scale_color_discrete(name = "Temperature")
+        }
+      })
+    }
 
-              ggplot(weatherData, aes(weatherDate, group = 2))+
-                geom_line(aes(y = weatherTempMax, colour = "Maximum")) +
-                geom_line(aes(y = weatherTempMin, colour = "Minimum")) +
-                labs(x = "\nDate", y = "Temperature\n",title = "Temperature for the Last 7 Days") +
-                TemperatureTheme + scale_color_discrete(name = "Temperature")
-            }
-            else if(input$plotChoice == "precip"){
-              ggplot(weatherData, aes(weatherDate, group = 2))+
-                geom_line(aes(y = weatherPrecip, colour = "Precipitation per Hour")) +
-                labs(x = "\nDate", y = "Precipitation\n",title = "Precipitation for the Last 7 Days") +
-                TemperatureTheme + scale_color_discrete(name = "Precipitation")
-            }
-            else if(input$plotChoice == "humid"){
-              ggplot(weatherData, aes(weatherDate, group = 2))+
-                geom_line(aes(y = weatherHumidity, colour = "Humidity")) +
-                labs(x = "\nDate", y = "Humidity\n",title = "Humidity for the Last 7 Days") +
-                TemperatureTheme + scale_color_discrete(name = "Humidity")
-            }
-            else if(input$plotChoice == "wind"){
-              ggplot(weatherData, aes(weatherDate, group = 2))+
-                geom_line(aes(y = weatherWindSpeed, colour = "Wind Speed")) +
-                labs(x = "\nDate", y = "Wind Speed\n",title = "Wind Speed for the Last 7 Days") +
-                TemperatureTheme + scale_color_discrete(name = "Wind Speed")
-            }
-            else if(input$plotChoice == "ozone"){
-              ggplot(weatherData, aes(weatherDate, group = 2))+
-                geom_line(aes(y = weatherPrecip, colour = "Ozone")) +
-                labs(x = "\nDate", y = "Ozone\n",title = "Ozone levels for the Last 7 Days") +
-                TemperatureTheme + scale_color_discrete(name = "Ozone")
-            }
-          }
-          else{
-            return()
-          }
-          
-        })
-    })
+    if("ozone" %in% input$plotChoice){
+      output$ozonePlot = renderPlot({
+        if(!is.null(weatherValues$weather)){
+          weatherData = weatherValues$weather
+          ggplot(weatherData, aes(weatherDate, group = 2))+
+            geom_line(aes(y = weatherOzone, colour = "Ozone")) +
+            labs(x = "\nDate", y = "Ozone\n",title = "Ozone levels for the Last 7 Days") +
+            TemperatureTheme + scale_color_discrete(name = "Ozone")
+        }
+      })
+    }
+  })
   
-  output$weatherPlot = renderPlot({
+  output$temperaturePlot = renderPlot({
+    plotType()
+  })
+  output$precipPlot = renderPlot({
+    plotType()
+  })
+  output$humidPlot = renderPlot({
+    plotType()
+  })
+  output$windPlot = renderPlot({
+    plotType()
+  })
+  output$ozonePlot = renderPlot({
     plotType()
   })
   
   
   })
-
-#dat = switch(input$plotChoice,
-#             "temp" = cbind.data.frame(max = weatherData$weatherTempMax, min = weatherData$weatherTempMin),
-#             "precip" = c(),
-#             "sunset" = c(),
-#             "sunrise" = c(),
-#             "ozone" = c()
-#)
 
 
 
