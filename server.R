@@ -56,7 +56,7 @@ shinyServer(function(input, output, session) {
           weatherData = weatherValues$weather
           ggplot(weatherData, aes(weatherDate, group = 2))+
             geom_line(aes(y = weatherWindSpeed, colour = "Wind Speed")) +
-            labs(x = "\nDate", y = "Wind Speed\n",title =paste("Wind Speed for the Last",input$timeSelect,"Days")) +
+            labs(x = "\nDate", y = "Wind Speed\n",title =paste("Wind Speed for the Past",input$timeSelect,"Days")) +
             TemperatureTheme + scale_color_discrete(name = "Wind Speed")
         }
       })
@@ -67,7 +67,7 @@ shinyServer(function(input, output, session) {
           weatherData = weatherValues$weather
           ggplot(weatherData, aes(weatherDate, group = 2))+
             geom_line(aes(y = weatherHumidity, colour = "Humidity")) +
-            labs(x = "\nDate", y = "Humidity\n",title = "Humidity for the Last 7 Days") +
+            labs(x = "\nDate", y = "Humidity\n",title = paste("Humidity for the Past",input$timeSelect, "Days")) +
             TemperatureTheme + scale_color_discrete(name = "Humidity")
         }
       })
@@ -78,7 +78,7 @@ shinyServer(function(input, output, session) {
           weatherData = weatherValues$weather
           ggplot(weatherData, aes(weatherDate, group = 2))+
             geom_line(aes(y = weatherPrecip, colour = "Precipitation per Hour")) +
-            labs(x = "\nDate", y = "Precipitation\n",title = "Precipitation for the Last 7 Days") +
+            labs(x = "\nDate", y = "Precipitation\n",title = paste("Precipitation for the Past",input$timeSelect,"Days")) +
             TemperatureTheme + scale_color_discrete(name = "Precipitation")
         }
       })
@@ -90,7 +90,7 @@ shinyServer(function(input, output, session) {
           ggplot(weatherData, aes(weatherDate, group = 2))+
             geom_line(aes(y = weatherTempMax, colour = "Maximum")) +
             geom_line(aes(y = weatherTempMin, colour = "Minimum")) +
-            labs(x = "\nDate", y = "Temperature\n",title = "Temperature for the Last 7 Days") +
+            labs(x = "\nDate", y = "Temperature\n",title = paste("Temperature for the Past",input$timeSelect, "Days")) +
             TemperatureTheme + scale_color_discrete(name = "Temperature")
         }
       })
@@ -102,7 +102,7 @@ shinyServer(function(input, output, session) {
           weatherData = weatherValues$weather
           ggplot(weatherData, aes(weatherDate, group = 2))+
             geom_line(aes(y = weatherOzone, colour = "Ozone")) +
-            labs(x = "\nDate", y = "Ozone\n",title = "Ozone levels for the Last 7 Days") +
+            labs(x = "\nDate", y = "Ozone\n",title = paste("Ozone levels for the Past",input$timeSelect,"Days")) +
             TemperatureTheme + scale_color_discrete(name = "Ozone")
         }
       })
