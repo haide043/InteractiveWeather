@@ -10,6 +10,11 @@ shinyUI(
              titlePanel(h1(strong("Interactive Weather"), align = "center")),
              h2("Created by Humza Haider",align = "center"),
              br(),
+             h4(strong("Click anywhere on the map to have the historical data displayed or have the weather forcast for out to 7 days.")),
+             h4(strong("Check the boxes to display the weather variables you want to see.")),
+             h4(strong("Please allow time for the data to load. Enjoy!")),
+             br(),
+             br(),
              fluidRow(
                column(3, 
                       selectInput("timeSelect", label = h3("Select a duration of time"),
