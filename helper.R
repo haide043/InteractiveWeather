@@ -88,6 +88,113 @@ getWeatherDataFromJSON <- function(weatherJSON) {
   return(weatherDF)
 }
 
+getWeatherDataFromJSONFuture <- function(weatherJSON) {
+  JSONList <- fromJSON(weatherJSON)
+  weatherDataFrame = NULL
+  
+  weatherSummary = NA
+  weatherIcon = NA
+  weatherSunrise = NA
+  weatherSunset = NA
+  weatherMoonPhase = NA
+  weatherPrecip = NA
+  weatherTempMin = NA
+  weatherTempMax = NA
+  weatherDewPoint = NA
+  weatherHumidity = NA
+  weatherWindSpeed = NA
+  weatherWindBearing = NA
+  weatherVisibillity = NA
+  weatherCloudCover = NA
+  weatherPressure= NA
+  weatherOzone = NA
+  for(i in 2:8){
+    if(!is.null(JSONList$daily$data[[i]]$time)){
+      weatherDate = JSONList$daily$data[[i]]$time
+      weatherDate = toString(as.POSIXct(as.numeric(toString(weatherDate)), origin = "1970-01-01"))
+      
+    }
+  if(!is.null(JSONList$daily$data[[i]]$summary)){
+    weatherSummary = JSONList$daily$data[[i]]$summary
+  }
+  if(!is.null(JSONList$daily$data[[i]]$icon)){
+    weatherIcon = JSONList$daily$data[[i]]$icon
+  }
+  if(!is.null(JSONList$daily$data[[i]]$sunriseTime)){
+    weatherSunrise = JSONList$daily$data[[i]]$sunriseTime
+    weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "1970-01-01"))
+  }
+  if(!is.null(JSONList$daily$data[[i]]$sunsetTime)){
+    weatherSunset = JSONList$daily$data[[i]]$sunsetTime
+    weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "1970-01-01"))
+    
+  }
+  if(!is.null(JSONList$daily$data[[i]]$moonPhase)){
+    weatherMoonPhase = JSONList$daily$data[[i]]$moonPhase
+  }
+  if(!is.null(JSONList$daily$data[[i]]$precipIntensity)){
+    weatherPrecip = JSONList$daily$data[[i]]$precipIntensity
+  }
+  if(!is.null(JSONList$daily$data[[i]]$temperatureMin)){
+    weatherTempMin = JSONList$daily$data[[i]]$temperatureMin
+  }
+  if(!is.null(JSONList$daily$data[[i]]$temperatureMax)){
+    weatherTempMax = JSONList$daily$data[[i]]$temperatureMax
+  }
+  if(!is.null(JSONList$daily$data[[i]]$dewPoint)){
+    weatherDewPoint = JSONList$daily$data[[i]]$dewPoint
+  }
+  if(!is.null(JSONList$daily$data[[i]]$humidity)){
+    weatherHumidity = JSONList$daily$data[[i]]$humidity
+  }
+  if(!is.null(JSONList$daily$data[[i]]$windSpeed)){
+    weatherWindSpeed = JSONList$daily$data[[i]]$windSpeed
+  }
+  if(!is.null(JSONList$daily$data[[i]]$windBearing)){
+    weatherWindBearing = JSONList$daily$data[[i]]$windBearing
+  }
+  if(!is.null(JSONList$daily$data[[i]]$visibility)){
+    weatherVisibillity = JSONList$daily$data[[i]]$visibility
+  }
+  if(!is.null(JSONList$daily$data[[i]]$cloudCover)){
+    weatherCloudCover = JSONList$daily$data[[i]]$cloudCover
+  }
+  if(!is.null(JSONList$daily$data[[i]]$pressure)){
+    weatherPressure = JSONList$daily$data[[i]]$pressure
+  }
+  if(!is.null(JSONList$daily$data[[i]]$ozone)){
+    weatherOzone = JSONList$daily$data[[i]]$ozone
+  }
+  
+  weatherDF = cbind.data.frame(weatherDate, weatherCloudCover,weatherVisibillity,weatherWindBearing,
+                               weatherWindSpeed,weatherHumidity,weatherDewPoint,weatherTempMax,
+                               weatherTempMin,weatherPrecip,weatherMoonPhase,weatherSunset,
+                               weatherSunrise,weatherIcon,weatherSummary, weatherPressure, weatherOzone)
+  
+  colnames(weatherDF) = col.names = c('weatherDate','weatherCloudCover','weatherVisibillity','weatherWindBearing',
+                                      'weatherWindSpeed','weatherHumidity','weatherDewPoint','weatherTempMax',
+                                      'weatherTempMin','weatherPrecip','weatherMoonPhase','weatherSunset',
+                                      'weatherSunrise','weatherIcon','weatherSummary','weatherPressure','weatherOzone')
+  
+  weatherDataFrame = rbind(weatherDataFrame, weatherDF)
+  }
+  
+  return(weatherDataFrame)
+}
+
+
+next7Days = function(latitude, longitude){
+  weatherDataFrame = NULL
+  
+  for(i in 1:2){
+    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude, sep=""))
+    JSONData = getWeatherDataFromJSONFuture(weatherJSON)
+    JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
+    weatherDataFrame = rbind(weatherDataFrame, JSONData)
+  }
+  return(weatherDataFrame)
+}
+
 last7Days = function(latitude, longitude){
   weatherDataFrame = NULL
   
