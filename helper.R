@@ -94,7 +94,43 @@ last7Days = function(latitude, longitude){
   currentTime = c(as.numeric(as.POSIXct(Sys.time())))
   epoch = 24*60*60
   currentTime = currentTime + epoch
-  for(i in 1:7){
+  for(i in 1:2){
+    newDay = currentTime[i] - epoch
+    currentTime = append(currentTime, newDay)
+    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
+    JSONData = getWeatherDataFromJSON(weatherJSON)
+    JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
+    weatherDataFrame = rbind(weatherDataFrame, JSONData)
+  }
+  return(weatherDataFrame)
+}
+
+
+last30Days = function(latitude, longitude){
+  weatherDataFrame = NULL
+  
+  currentTime = c(as.numeric(as.POSIXct(Sys.time())))
+  epoch = 24*60*60
+  currentTime = currentTime + epoch
+  for(i in 1:3){
+    newDay = currentTime[i] - epoch
+    currentTime = append(currentTime, newDay)
+    weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
+    JSONData = getWeatherDataFromJSON(weatherJSON)
+    JSONData = cbind(JSONData, weatherDate = Sys.Date()-i+1)
+    weatherDataFrame = rbind(weatherDataFrame, JSONData)
+  }
+  return(weatherDataFrame)
+}
+
+
+last1Days = function(latitude, longitude){
+  weatherDataFrame = NULL
+  
+  currentTime = c(as.numeric(as.POSIXct(Sys.time())))
+  epoch = 24*60*60
+  currentTime = currentTime + epoch
+  for(i in 1){
     newDay = currentTime[i] - epoch
     currentTime = append(currentTime, newDay)
     weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/db60aece2f6cc54dc9a1c3706172b59c/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
