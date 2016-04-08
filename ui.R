@@ -26,12 +26,20 @@ shinyUI(
                                      "Precipitation" = "precip",
                                      "Wind Speed" = "wind",
                                      "Humidity" = "humid",
-                                     "Ozone" = "ozone"
-                                   ))
+                                     "Ozone Levels" = "ozone"
+                                   ) 
+                                   ),
+                      textInput("location", label = h3("Search for a city"),
+                                value = "Search for a place!"),
+                      actionButton("findLocation", label = "Search")
                ),
                column(9,
                       leafletOutput("mymap", height = "600")
                ),
+               fluidRow(
+                 column(12, height = "5px")),
+               
+               br(),
                br(),
                fluidRow(
 
@@ -44,6 +52,7 @@ shinyUI(
                column(4,
                       plotOutput("windPlot", width = "100%")
                ),
+               br(),
                fluidRow(
                column(6,
                       plotOutput("humidPlot", width = "100%")

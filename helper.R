@@ -32,11 +32,11 @@ getWeatherDataFromJSON <- function(weatherJSON) {
   }
   if(!is.null(JSONList$daily$data[[1]]$sunriseTime)){
     weatherSunrise = JSONList$daily$data[[1]]$sunriseTime
-    weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "1970-01-01"))
+    weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "1970-01-01", format="%m/%d/%Y"))
   }
   if(!is.null(JSONList$daily$data[[1]]$sunsetTime)){
     weatherSunset = JSONList$daily$data[[1]]$sunsetTime
-    weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "1970-01-01"))
+    weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "1970-01-01",format="%m/%d/%Y"))
     
   }
   if(!is.null(JSONList$daily$data[[1]]$moonPhase)){
@@ -193,7 +193,7 @@ next7Days = function(latitude, longitude){
 last7Days = function(latitude, longitude){
   weatherDataFrame = NULL
   
-  currentTime = c(as.numeric(as.POSIXct(Sys.time())))
+  currentTime = c(as.numeric(as.POSIXct(Sys.time(),format="%m/%d/%Y")))
   epoch = 24*60*60
   currentTime = currentTime + epoch
   for(i in 1:2){
@@ -211,7 +211,7 @@ last7Days = function(latitude, longitude){
 last30Days = function(latitude, longitude){
   weatherDataFrame = NULL
   
-  currentTime = c(as.numeric(as.POSIXct(Sys.time())))
+  currentTime = c((as.POSIXct(Sys.time())))
   epoch = 24*60*60
   currentTime = currentTime + epoch
   for(i in 1:3){

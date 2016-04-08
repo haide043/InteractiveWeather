@@ -8,7 +8,7 @@ clat = NULL
 clng = NULL
 
 TemperatureTheme <- theme_grey() + theme(plot.title = element_text(family = "Times", face = "bold", colour = "Black", size = rel(2)), 
-                                     axis.title = element_text(family = "Times", size= rel(2)))
+                                     axis.title = element_text(family = "Times", size= rel(2)), plot.background = element_rect(fill = "grey"))
 
 shinyServer(function(input, output, session) {  
   output$mymap <- renderLeaflet({
@@ -21,8 +21,6 @@ shinyServer(function(input, output, session) {
     click = input$mymap_click
     clat <<- click$lat
     clng <<- click$lng
-    print(clat)
-    print(clng)
     
     if(input$timeSelect =="past 7"){
       weatherValues$weather = last7Days(clat, clng)
@@ -38,18 +36,36 @@ shinyServer(function(input, output, session) {
     leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat)
     })
   
+  
+  observeEvent(input$findLocation,{
+    clat = geocode(input$location)$lat
+    validate(need(!is.na(clat), "Sorry, your location could not be found."))
+    clng = geocode(input$location)$lon
+    
+    if(input$timeSelect =="past 7"){
+      weatherValues$weather = last7Days(clat, clng)
+    }
+    else if(input$timeSelect == "past 30"){
+      weatherValues$weather = last30Days(clat, clng)
+    }
+    else if(input$timeSelect == "next 7"){
+      weatherValues$weather = next7Days(clat, clng)
+    }
+    
+    leafletProxy("mymap") %>% clearMarkers()
+    leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat)
+  })
+  
   observeEvent(input$timeSelect,{
-    print(input$timeSelect)
-    if(!is.null(clat)){
-      if(input$timeSelect =="past 7"){
-        weatherValues$weather = last7Days(clat, clng)
-      }
-      else if(input$timeSelect == "past 30"){
-        weatherValues$weather = last30Days(clat, clng)
-      }
-      else if(input$timeSelect == "next 7"){
-        weatherValues$weather = next7Days(clat,clng)
-      }
+    validate(need(!is.null(clat) ,''))
+    if(input$timeSelect =="past 7"){
+      weatherValues$weather = last7Days(clat, clng)
+    }
+    else if(input$timeSelect == "past 30"){
+      weatherValues$weather = last30Days(clat, clng)
+    }
+    else if(input$timeSelect == "next 7"){
+      weatherValues$weather = next7Days(clat,clng)
     }
     else{}
   })
