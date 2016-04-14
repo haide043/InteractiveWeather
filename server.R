@@ -2,6 +2,7 @@
 library(shiny)
 library(leaflet)
 library(ggmap)
+library(DT)
 source('helper.R')
 
 clat = NULL
@@ -60,9 +61,18 @@ partlyCloudyNightIcon <- makeIcon(
   iconWidth = 30, iconHeight = 30
 )
 
-
-
-
+iconDataTable = data.frame(Meaning = c('Rain','Cloudy','Partly Cloudy','Windy', 'Clear Day','Foggy',
+                         'Clear Night','Snow','Sleet','Partly Cloudy Night'),
+                       Icon = c('<img src = "http://pix.iemoji.com/twit33/0564.png" height = "30" width = "30"></img>',
+                                '<img src = "http://pix.iemoji.com/lg33/0082.png" height = "30" width = "30"></img>',
+                                '<img src = "http://pix.iemoji.com/lg33/0116.png" height = "30" width = "30"></img>',
+                                '<img src = "http://pix.iemoji.com/hang33/0262.png" height = "30" width = "30"></img>',
+                                '<img src = "https://www.emojibase.com/resources/img/emojis/apple/x2600.png.pagespeed.ic.GGgVrp9saD.png" height = "30" width = "30"></img>',
+                                '<img src = "http://emojipedia-us.s3.amazonaws.com/cache/dc/a6/dca6d0753f95f1b458b95b2d1d19bf22.png" height = "30" width = "30"></img>',
+                                '<img src = "http://iconbug.com/data/c4/128/625f4bf63872e54df73ced5d07eb455b.png" height = "30" width = "30"></img>',
+                                '<img src = "http://pix.iemoji.com/twit33/0139.png" height = "30" width = "30"></img>',
+                                '<img src = "http://w1.bcn.cat/temps/img/temps_ico/aiguaneu.png" height = "30" width = "30"></img>',
+                                '<img src = "http://media.nbcbayarea.com/designimages/new_wx_99.png" height = "30" width = "30"></img>'))
 
 shinyServer(function(input, output, session) {  
   output$mymap <- renderLeaflet({
@@ -120,16 +130,19 @@ shinyServer(function(input, output, session) {
     
     if(input$timeSelect =="past 7"){
       weatherValues$weather = last7Days(clat, clng)
+      icon = NULL
     }
     else if(input$timeSelect == "past 30"){
       weatherValues$weather = last30Days(clat, clng)
+      icon = NULL
     }
     else if(input$timeSelect == "next 7"){
       weatherValues$weather = next7Days(clat, clng)
+      icon = iconChoice()
     }
 
     leafletProxy("mymap") %>% clearMarkers()
-    leafletProxy("mymap") %>% addMarkers(icon = iconChoice(), lng = clng, lat = clat)
+    leafletProxy("mymap") %>% addMarkers(icon = icon, lng = clng, lat = clat)
     })
   
   
@@ -140,16 +153,19 @@ shinyServer(function(input, output, session) {
     
     if(input$timeSelect =="past 7"){
       weatherValues$weather = last7Days(clat, clng)
+      icon = NULL
     }
     else if(input$timeSelect == "past 30"){
       weatherValues$weather = last30Days(clat, clng)
+      icon = NULL
     }
     else if(input$timeSelect == "next 7"){
       weatherValues$weather = next7Days(clat, clng)
+      icon = iconChoice()
     }
     
     leafletProxy("mymap") %>% clearMarkers()
-    leafletProxy("mymap") %>% addMarkers(icon = iconChoice(), lng = clng, lat = clat)
+    leafletProxy("mymap") %>% addMarkers(icon = icon, lng = clng, lat = clat)
   })
   
   
@@ -158,12 +174,15 @@ shinyServer(function(input, output, session) {
     validate(need(!is.null(clat) ,''))
     if(input$timeSelect =="past 7"){
       weatherValues$weather = last7Days(clat, clng)
+      icon = NULL
     }
     else if(input$timeSelect == "past 30"){
       weatherValues$weather = last30Days(clat, clng)
+      icon =NULL
     }
     else if(input$timeSelect == "next 7"){
       weatherValues$weather = next7Days(clat,clng)
+      icon = iconChoice()
     }
     else{}
   })
@@ -261,6 +280,12 @@ shinyServer(function(input, output, session) {
   })
   output$ozonePlot = renderPlot({
     plotType()
+  })
+  output$iconTable = DT::renderDataTable({
+    DT::datatable(iconDataTable, escape = FALSE, style = "bootstrap", 
+                  selection = "none",class = "table-condensed", rownames = FALSE,
+                  options = list(lengthChange = FALSE, searching = FALSE, autowidth = TRUE,
+                                 columnDefs = list(list(width= "100px", targets = c(0,1)))))
   })
   
   
