@@ -10,11 +10,108 @@ clng = NULL
 TemperatureTheme <- theme_grey() + theme(plot.title = element_text(family = "Times", face = "bold", colour = "Black", size = rel(2)), 
                                      axis.title = element_text(family = "Times", size= rel(2)), plot.background = element_rect(fill = "grey"))
 
+rainIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/twit33/0564.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+cloudyIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/lg33/0082.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+partlyCloudyIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/lg33/0116.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+windIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/hang33/0262.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+clearIcon <- makeIcon(
+  iconUrl = "https://www.emojibase.com/resources/img/emojis/apple/x2600.png.pagespeed.ic.GGgVrp9saD.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+fogIcon <- makeIcon(
+  iconUrl = "http://emojipedia-us.s3.amazonaws.com/cache/dc/a6/dca6d0753f95f1b458b95b2d1d19bf22.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+clearNightIcon <- makeIcon(
+  iconUrl = "http://iconbug.com/data/c4/128/625f4bf63872e54df73ced5d07eb455b.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+snowIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/twit33/0139.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+sleetIcon <- makeIcon(
+  iconUrl = "http://w1.bcn.cat/temps/img/temps_ico/aiguaneu.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+partlyCloudyNightIcon <- makeIcon(
+  iconUrl = "http://media.nbcbayarea.com/designimages/new_wx_99.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+
+
+
+
 shinyServer(function(input, output, session) {  
   output$mymap <- renderLeaflet({
     leaflet()  %>% setView(-93.65, 42.0285, zoom = 4) %>% setMaxBounds(-180, -90, 180, 90) %>% 
-      addProviderTiles("MapQuestOpen.OSM", options = providerTileOptions(noWrap = T, minZoom = 3)
-      )
+      addProviderTiles("MapQuestOpen.OSM", options = providerTileOptions(noWrap = T, minZoom = 3)) %>%  addMarkers(icon = rainIcon, lng = rainLon, lat = rainLat) %>%
+      addMarkers(icon = cloudyIcon, lng = cloudyLon, lat = cloudyLat) %>% addMarkers(icon = partlyCloudyIcon, lng = partlycloudyLon, lat = partlycloudyLat) %>% 
+      addMarkers(icon = windIcon, lng = windLon, lat = windLat) %>% addMarkers(icon = clearIcon, lng = clearLon, lat = clearLat) %>% addMarkers(icon = fogIcon, lng = fogLon, lat = fogLat)
+
+  })
+  
+  weatherValues = reactiveValues(weather = NULL)
+  
+  
+  iconChoice = eventReactive(input$mymap_click,{
+    print(weatherValues$weather$currentIcon[1])
+    if(weatherValues$weather$currentIcon[1] == "rain"){
+      icon = rainIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "partly-cloudy-day"){
+      icon = partlyCloudyIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "cloudy"){
+      icon = cloudyIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "clear-day"){
+      icon = clearIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "fog"){
+      icon = fogIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "wind"){
+      icon = partlyCloudyIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "clear-night"){
+      icon = clearNightIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "snow"){
+      icon = snowIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "sleet"){
+      icon = sleetIcon
+    }
+    else if(weatherValues$weather$currentIcon[1] == "partly-cloudy-night"){
+      icon = partlyCloudyNightIcon
+    }
+    else{
+      icon = NULL
+    }
+    return(icon)
   })
   
   observeEvent(input$mymap_click, {
@@ -31,9 +128,9 @@ shinyServer(function(input, output, session) {
     else if(input$timeSelect == "next 7"){
       weatherValues$weather = next7Days(clat, clng)
     }
-  
+
     leafletProxy("mymap") %>% clearMarkers()
-    leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat)
+    leafletProxy("mymap") %>% addMarkers(icon = iconChoice(), lng = clng, lat = clat)
     })
   
   
@@ -53,8 +150,11 @@ shinyServer(function(input, output, session) {
     }
     
     leafletProxy("mymap") %>% clearMarkers()
-    leafletProxy("mymap") %>% addMarkers(lng = clng, lat = clat)
+    print(weatherValues$weather$currentIcon)
+    leafletProxy("mymap") %>% addMarkers(icon = iconChoice(), lng = clng, lat = clat)
   })
+  
+  
   
   observeEvent(input$timeSelect,{
     validate(need(!is.null(clat) ,''))
@@ -70,7 +170,6 @@ shinyServer(function(input, output, session) {
     else{}
   })
   
-  weatherValues = reactiveValues(weather = NULL)
     
    
   plotType = eventReactive(input$plotChoice, {
