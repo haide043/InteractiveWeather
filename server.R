@@ -77,7 +77,6 @@ shinyServer(function(input, output, session) {
   
   
   iconChoice = eventReactive(input$mymap_click,{
-    print(weatherValues$weather$currentIcon[1])
     if(weatherValues$weather$currentIcon[1] == "rain"){
       icon = rainIcon
     }
@@ -150,7 +149,6 @@ shinyServer(function(input, output, session) {
     }
     
     leafletProxy("mymap") %>% clearMarkers()
-    print(weatherValues$weather$currentIcon)
     leafletProxy("mymap") %>% addMarkers(icon = iconChoice(), lng = clng, lat = clat)
   })
   
