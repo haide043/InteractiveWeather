@@ -77,10 +77,7 @@ iconDataTable = data.frame(Meaning = c('Rain','Cloudy','Partly Cloudy','Windy', 
 shinyServer(function(input, output, session) {  
   output$mymap <- renderLeaflet({
     leaflet()  %>% setView(-93.65, 42.0285, zoom = 4) %>% setMaxBounds(-180, -90, 180, 90) %>% 
-      addProviderTiles("MapQuestOpen.OSM", options = providerTileOptions(noWrap = T, minZoom = 3)) %>%  addMarkers(icon = rainIcon, lng = rainLon, lat = rainLat) %>%
-      addMarkers(icon = cloudyIcon, lng = cloudyLon, lat = cloudyLat) %>% addMarkers(icon = partlyCloudyIcon, lng = partlycloudyLon, lat = partlycloudyLat) %>% 
-      addMarkers(icon = windIcon, lng = windLon, lat = windLat) %>% addMarkers(icon = clearIcon, lng = clearLon, lat = clearLat) %>% addMarkers(icon = fogIcon, lng = fogLon, lat = fogLat)
-
+      addProviderTiles("MapQuestOpen.OSM", options = providerTileOptions(noWrap = T, minZoom = 3))
   })
   
   weatherValues = reactiveValues(weather = NULL)

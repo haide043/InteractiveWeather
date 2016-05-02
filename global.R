@@ -1,4 +1,7 @@
 #global.R
+library(rjson)
+
+darkForecastAPIKey = fromJSON(file = "keys.json")$pw
 Cities = read.csv("USCities.csv")
 
 
