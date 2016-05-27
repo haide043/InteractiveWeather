@@ -150,6 +150,76 @@ last1Days = function(latitude, longitude){
 
 
 
+#####################################################
+
+clat = NULL
+clng = NULL
+
+TemperatureTheme <- theme_grey() + theme(plot.title = element_text(family = "Times", face = "bold", colour = "Black", size = rel(2)), 
+                                         axis.title = element_text(family = "Times", size= rel(2)), plot.background = element_rect(fill = "grey"))
+
+rainIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/twit33/0564.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+cloudyIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/lg33/0082.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+partlyCloudyIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/lg33/0116.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+windIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/hang33/0262.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+clearIcon <- makeIcon(
+  iconUrl = "https://www.emojibase.com/resources/img/emojis/apple/x2600.png.pagespeed.ic.GGgVrp9saD.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+fogIcon <- makeIcon(
+  iconUrl = "http://emojipedia-us.s3.amazonaws.com/cache/dc/a6/dca6d0753f95f1b458b95b2d1d19bf22.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+clearNightIcon <- makeIcon(
+  iconUrl = "http://iconbug.com/data/c4/128/625f4bf63872e54df73ced5d07eb455b.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+snowIcon <- makeIcon(
+  iconUrl = "http://pix.iemoji.com/twit33/0139.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+sleetIcon <- makeIcon(
+  iconUrl = "http://w1.bcn.cat/temps/img/temps_ico/aiguaneu.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+partlyCloudyNightIcon <- makeIcon(
+  iconUrl = "http://media.nbcbayarea.com/designimages/new_wx_99.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+iconDataTable = data.frame(Meaning = c('Rain','Cloudy','Partly Cloudy','Windy', 'Clear Day','Foggy',
+                                       'Clear Night','Snow','Sleet','Partly Cloudy Night'),
+                           Icon = c('<img src = "http://pix.iemoji.com/twit33/0564.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://pix.iemoji.com/lg33/0082.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://pix.iemoji.com/lg33/0116.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://pix.iemoji.com/hang33/0262.png" height = "30" width = "30"></img>',
+                                    '<img src = "https://www.emojibase.com/resources/img/emojis/apple/x2600.png.pagespeed.ic.GGgVrp9saD.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://emojipedia-us.s3.amazonaws.com/cache/dc/a6/dca6d0753f95f1b458b95b2d1d19bf22.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://iconbug.com/data/c4/128/625f4bf63872e54df73ced5d07eb455b.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://pix.iemoji.com/twit33/0139.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://w1.bcn.cat/temps/img/temps_ico/aiguaneu.png" height = "30" width = "30"></img>',
+                                    '<img src = "http://media.nbcbayarea.com/designimages/new_wx_99.png" height = "30" width = "30"></img>'))
 
 
 
