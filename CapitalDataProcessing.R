@@ -22,3 +22,5 @@ lastYear = function(){
   write.csv(weatherDataFrame, paste(capitals[j,1], '.csv', sep = ""))
   }
 }
+
+lastYear()
