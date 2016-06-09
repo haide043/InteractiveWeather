@@ -112,7 +112,6 @@ last7Days = function(latitude, longitude){
   return(weatherDataFrame)
 }
 
-
 last30Days = function(latitude, longitude){
   weatherDataFrame = NULL
   

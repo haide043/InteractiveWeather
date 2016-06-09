@@ -1,0 +1,368 @@
+"","weatherCloudCover","weatherVisibillity","weatherWindBearing","weatherWindSpeed","weatherHumidity","weatherDewPoint","weatherTempMax","weatherTempMin","weatherPrecip","weatherMoonPhase","weatherSunset","weatherSunrise","weatherIcon","weatherSummary","weatherPressure","weatherOzone","weatherDate"
+"1",0.48,9.96,81,3.04,0.72,48.96,69.06,50.39,0,0.17,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1010.63,342.24,2016-06-08
+"2",0.42,9.33,346,3.88,0.71,43.73,62.37,44.42,0,0.14,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1007.75,354.87,2016-06-07
+"3",0.5,8.9,287,2.92,0.8,44.63,57.23,45.62,0.0084,0.1,"NA","NA","rain","Light rain until afternoon.",1015.2,361.37,2016-06-06
+"4",0.57,6.09,248,3.08,0.88,46.32,52.1,47.63,0.0281,0.07,"NA","NA","rain","Light rain throughout the day.",1016.14,351.13,2016-06-05
+"5",0.91,6.71,109,2.96,0.88,45.16,52.63,43.69,0.0369,0.03,"NA","NA","rain","Rain throughout the day.",1015.67,334.47,2016-06-04
+"6",0.75,9.09,165,5.51,0.91,44.95,50.57,44.59,0.0274,0.98,"NA","NA","rain","Rain until afternoon.",1024.17,353.52,2016-06-03
+"7",0.83,7.63,137,4.03,0.88,44.98,51.27,45.52,0.0209,0.95,"NA","NA","rain","Light rain throughout the day.",1010.08,357.68,2016-06-02
+"8",0.59,8.04,143,2.96,0.87,43.64,51.95,42.74,0.007,0.92,"NA","NA","rain","Light rain in the morning and evening.",1006.54,354.57,2016-06-01
+"9",0.82,7.66,136,4.11,0.91,42.91,47.2,43.02,0.014,0.88,"NA","NA","rain","Light rain until evening, starting again overnight.",1006.46,365.51,2016-05-31
+"10",0.74,9.62,88,2.24,0.82,41.22,52.31,40.79,0.0028,0.84,"NA","NA","rain","Light rain starting in the evening.",1016.42,355.03,2016-05-30
+"11",0.69,9.64,147,3.88,0.9,42.25,47.48,42.73,0.011,0.8,"NA","NA","rain","Light rain until afternoon.",1023.98,365.96,2016-05-29
+"12",0.74,9.93,74,3.3,0.77,40.67,51.31,43.07,0.0076,0.77,"NA","NA","rain","Light rain starting in the afternoon.",1016.11,361.58,2016-05-28
+"13",0.28,10,47,5.51,0.72,39.72,55.65,41.69,9e-04,0.73,"NA","NA","rain","Drizzle overnight.",1014.19,366.17,2016-05-27
+"14",0.33,9.21,13,3.88,0.75,40.47,55.13,41.97,0.003,0.69,"NA","NA","partly-cloudy-day","Partly cloudy starting in the evening.",1015.64,362.78,2016-05-26
+"15",0.88,9.66,264,2.15,0.87,40.61,48.71,39.81,0.0057,0.66,"NA","NA","rain","Light rain in the morning and evening.",1019.89,348.95,2016-05-25
+"16",0.97,10,198,1.74,0.75,39.79,54.81,41.42,0.0021,0.63,"NA","NA","rain","Light rain in the evening and overnight.",1019.35,359.43,2016-05-24
+"17",NA,10,287,3.48,0.74,42.37,54.29,46.92,0,0.59,"NA","NA","clear-day","Clear throughout the day.",1016.02,NA,2016-05-23
+"18",NA,9.99,281,4.43,0.74,43.12,54.53,49,0,0.56,"NA","NA","clear-day","Clear throughout the day.",1014.45,NA,2016-05-22
+"19",0.62,10,294,3.83,0.71,44.59,56.97,49.93,0,0.53,"NA","NA","clear-day","Clear throughout the day.",1010.69,NA,2016-05-21
+"20",0.25,10,287,5.66,0.64,44.91,67.67,47.69,0,0.51,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1010.68,NA,2016-05-20
+"21",0.25,10,278,5.99,0.64,43.16,66.81,45.85,0,0.46,"NA","NA","partly-cloudy-night","Partly cloudy starting in the afternoon.",1019.46,NA,2016-05-19
+"22",0.17,9.96,272,5.46,0.69,43.36,67.77,41.83,0,0.44,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon.",1021.52,NA,2016-05-18
+"23",0.49,9.91,134,3.38,0.74,41.89,56.32,46.01,0.0026,0.41,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1014.62,NA,2016-05-17
+"24",NA,9.13,116,7.95,0.82,43.72,51.14,47.07,0.0129,0.38,"NA","NA","rain","Light rain in the morning and afternoon.",1011.02,NA,2016-05-16
+"25",NA,9.76,122,9.01,0.8,44.8,54.85,48.1,0.007,0.35,"NA","NA","rain","Rain in the morning and overnight.",1016.26,NA,2016-05-15
+"26",0.29,10,143,3.96,0.55,38.99,71.82,45.77,0,0.32,"NA","NA","rain","Light rain overnight.",1011.49,NA,2016-05-14
+"27",0.16,10,213,1.22,0.52,38.85,74.87,46.78,0,0.28,"NA","NA","partly-cloudy-day","Dry and partly cloudy throughout the day.",1016.6,NA,2016-05-13
+"28",0.21,9.99,55,0.41,0.52,37.5,76.74,44.76,0,0.25,"NA","NA","partly-cloudy-day","Dry and partly cloudy throughout the day.",1022.55,NA,2016-05-12
+"29",0.09,10,325,2.6,0.53,37.68,71.95,43.9,0,0.22,"NA","NA","partly-cloudy-day","Dry throughout the day and partly cloudy starting in the afternoon.",1026.51,NA,2016-05-11
+"30",0.04,9.97,312,4.37,0.63,40.39,70.89,41.77,0,0.19,"NA","NA","partly-cloudy-night","Dry throughout the day and partly cloudy overnight.",1027.89,NA,2016-05-10
+"31",0.28,9.68,269,4.6,0.74,40.52,56.94,44.03,0.0014,0.15,"NA","NA","rain","Drizzle in the morning.",1028.48,NA,2016-05-09
+"32",NA,9.2,270,1.87,0.78,40.13,51.05,44.14,0.0011,0.12,"NA","NA","rain","Light rain in the evening.",1026.98,NA,2016-05-08
+"33",0.44,9.93,287,3.39,0.76,40.05,54.05,42.11,0,0.08,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon, continuing until evening.",1021.23,NA,2016-05-07
+"34",NA,9.12,117,4.73,0.88,41.76,47.27,44.08,0.0124,0.04,"NA","NA","rain","Rain in the morning and afternoon.",1010.34,NA,2016-05-06
+"35",NA,6.18,119,10.25,0.88,43.19,48.83,44.08,0.0641,0.01,"NA","NA","rain","Rain until evening, starting again overnight.",1014.16,NA,2016-05-05
+"36",NA,7.52,105,7.47,0.88,40.55,45.53,42.93,0.0241,0.96,"NA","NA","rain","Rain in the morning and afternoon.",1022.22,NA,2016-05-04
+"37",0.67,9.47,128,5.54,0.83,38.63,47.24,41.01,0.0041,0.93,"NA","NA","rain","Rain starting in the evening.",1020.32,NA,2016-05-03
+"38",0.41,9.86,252,2.51,0.77,38.13,51.88,41.97,0,0.89,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1015.8,NA,2016-05-02
+"39",NA,7.66,131,2.82,0.89,43.58,50.04,43.98,0.033,0.85,"NA","NA","rain","Rain until afternoon, starting again in the evening.",1011.56,NA,2016-05-01
+"40",NA,8.28,115,4.9,0.88,42.23,46.99,44.08,0.0283,0.82,"NA","NA","rain","Rain throughout the day.",1013.98,NA,2016-04-30
+"41",NA,8.19,120,8.76,0.84,39.52,46.07,41.12,0.0163,0.78,"NA","NA","rain","Rain until evening.",1017.83,NA,2016-04-29
+"42",NA,9.31,116,5.54,0.85,38.82,46.04,40.01,0.0177,0.74,"NA","NA","rain","Rain starting in the afternoon.",1019.92,NA,2016-04-28
+"43",NA,9.82,110,5.36,0.86,39.94,46.86,41.15,0.0064,0.71,"NA","NA","rain","Rain in the evening and overnight.",1012.05,NA,2016-04-27
+"44",0.66,9.39,112,7.22,0.77,37.48,49.7,42.06,0.0054,0.68,"NA","NA","rain","Light rain in the morning and overnight.",1015.66,NA,2016-04-26
+"45",NA,9.39,124,5.99,0.81,39.55,49.35,43.1,0.003,0.64,"NA","NA","rain","Drizzle starting in the afternoon.",1012.1,NA,2016-04-25
+"46",0.67,10,120,6.58,0.75,37.05,49.11,41.02,2e-04,0.61,"NA","NA","clear-day","Clear throughout the day.",1016.58,NA,2016-04-24
+"47",0.7,9.15,132,4.93,0.9,40.5,45.01,41,0.0106,0.58,"NA","NA","rain","Rain until evening.",1014.93,NA,2016-04-23
+"48",NA,7.28,137,4.72,0.92,45.36,50.02,44.13,0.0324,0.55,"NA","NA","rain","Rain until evening.",1007.89,NA,2016-04-22
+"49",0.49,10,154,0.91,0.75,43.38,59.03,45.99,4e-04,0.52,"NA","NA","rain","Light rain overnight.",1006.48,NA,2016-04-21
+"50",0.31,10,257,0.42,0.71,40.92,61.44,38.77,4e-04,0.49,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1007.8,NA,2016-04-20
+"51",0.19,10,315,2.08,0.66,33.39,57.97,35.72,0,0.46,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1015.1,NA,2016-04-19
+"52",0.29,10,278,1.31,0.68,34.07,52.73,38.91,0,0.43,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1024.34,NA,2016-04-18
+"53",0.56,9.58,211,0.93,0.82,37.39,45.56,40.01,0.0025,0.4,"NA","NA","rain","Light rain in the morning.",1015.43,NA,2016-04-17
+"54",NA,9.07,108,4.19,0.89,40.99,47.81,41.02,0.0365,0.37,"NA","NA","rain","Heavy rain in the morning and afternoon.",1015.82,NA,2016-04-16
+"55",NA,9.97,117,8.52,0.75,37.89,50.17,41.94,0.0022,0.34,"NA","NA","rain","Drizzle in the morning.",1016.43,NA,2016-04-15
+"56",NA,9.76,117,6.11,0.84,38.8,46.13,42.02,0.004,0.3,"NA","NA","rain","Light rain in the evening.",1009.43,NA,2016-04-14
+"57",0.56,9.72,116,2.27,0.9,37.67,44.08,34.87,0.0036,0.27,"NA","NA","rain","Light rain in the evening.",1009.65,NA,2016-04-13
+"58",0.56,9.9,127,5.07,0.78,36.77,48.21,39.91,0,0.24,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1009.83,NA,2016-04-12
+"59",NA,9.99,108,1.97,0.86,39.41,49.09,40.13,0.0025,0.2,"NA","NA","rain","Light rain in the evening.",1002.77,NA,2016-04-11
+"60",NA,9.59,131,3.62,0.88,40.5,46.15,42.01,0.009,0.17,"NA","NA","rain","Light rain in the morning and afternoon.",1011.27,NA,2016-04-10
+"61",0.37,9.91,302,0.99,0.86,38.5,47.44,36.94,0.0011,0.13,"NA","NA","rain","Light rain in the afternoon.",1012.47,NA,2016-04-09
+"62",0.3,10,180,2.11,0.75,34.3,50.47,35.89,0,0.09,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1018.39,NA,2016-04-08
+"63",0.41,9.78,202,1.28,0.81,38.3,47.95,40.12,0.004,0.05,"NA","NA","rain","Light rain in the morning.",1008.63,NA,2016-04-07
+"64",0.58,9.13,110,4.72,0.86,40.73,51.8,40.05,0.0088,0.02,"NA","NA","rain","Rain in the morning.",1012.35,NA,2016-04-06
+"65",NA,9.93,113,4.88,0.83,37.88,45.02,40.99,0.0012,0.98,"NA","NA","rain","Rain overnight.",1021.93,NA,2016-04-05
+"66",NA,9.1,128,5.03,0.83,37.76,46.24,40.05,0.0166,0.94,"NA","NA","rain","Rain until afternoon.",1006.99,NA,2016-04-04
+"67",NA,9.3,125,4.39,0.87,39.72,47.62,40.82,0.0063,0.9,"NA","NA","rain","Light rain until afternoon, starting again overnight.",1007.11,NA,2016-04-03
+"68",0.26,9.31,294,1.53,0.77,36.85,51.98,37.83,0,0.87,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon.",1014.08,NA,2016-04-02
+"69",0.36,9.89,177,1.41,0.84,39.21,47.19,40.83,0.0018,0.83,"NA","NA","clear-day","Clear throughout the day.",1017.22,NA,2016-04-01
+"70",0.34,9.62,128,6.39,0.84,40.76,51.28,39.73,0.0049,0.79,"NA","NA","rain","Light rain in the evening and overnight.",1016.02,NA,2016-03-31
+"71",0.16,7.13,223,0.72,0.83,38.87,57.23,37.09,0,0.76,"NA","NA","fog","Foggy in the morning.",1019.48,NA,2016-03-30
+"72",0.32,7.98,264,2.42,0.87,42.48,51.09,41.09,0.0014,0.73,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1027.8,NA,2016-03-29
+"73",NA,5.95,121,8.36,0.92,42.12,46.03,43.06,0.0088,0.7,"NA","NA","rain","Light rain in the morning and evening.",1028.81,NA,2016-03-28
+"74",NA,8.48,109,9.1,0.87,38.82,44.93,40.01,0.0147,0.66,"NA","NA","rain","Light rain starting in the afternoon.",1025.03,NA,2016-03-27
+"75",0.57,9.62,132,3.24,0.87,38.53,45.42,38.94,0.0022,0.63,"NA","NA","partly-cloudy-day","Mostly cloudy in the morning.",1012.81,NA,2016-03-26
+"76",NA,9.48,115,5.95,0.88,38.08,42.91,40.09,0.0094,0.6,"NA","NA","rain","Light rain in the morning and afternoon.",1005.43,NA,2016-03-25
+"77",0.55,9.86,110,5.95,0.83,38.25,46,40.93,0.0073,0.57,"NA","NA","rain","Light rain starting in the evening.",1014.89,NA,2016-03-24
+"78",0.25,10,179,1.09,0.78,34.72,48.25,34.84,0,0.54,"NA","NA","rain","Light rain overnight.",1009.44,NA,2016-03-23
+"79",NA,10,133,4.25,0.78,35.87,48.06,36.98,2e-04,0.51,"NA","NA","clear-day","Clear throughout the day.",1003.45,NA,2016-03-22
+"80",NA,10,142,0.3,0.79,37.06,49.72,38.7,1e-04,0.48,"NA","NA","clear-day","Clear throughout the day.",1010.72,NA,2016-03-21
+"81",0.59,10,140,2.13,0.7,35.89,49.91,39.6,0,0.45,"NA","NA","clear-day","Clear throughout the day.",1004.54,NA,2016-03-20
+"82",0.28,10,169,1.41,0.77,39.1,54.67,40.01,0,0.42,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1008.27,NA,2016-03-19
+"83",NA,10,119,2.74,0.75,35.03,47.03,37.96,0,0.39,"NA","NA","clear-day","Clear throughout the day.",1011.94,NA,2016-03-18
+"84",0.52,10,167,1.86,0.74,31.75,43.09,35.9,0,0.36,"NA","NA","partly-cloudy-day","Mostly cloudy in the morning.",1017.39,NA,2016-03-17
+"85",0.42,10,113,3.48,0.77,32.08,43.13,34.76,7e-04,0.32,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1030.55,NA,2016-03-16
+"86",0.59,9.69,107,5.49,0.86,33.85,39.08,36.84,0.0026,0.29,"NA","NA","rain","Light rain in the afternoon and overnight.",1026.44,NA,2016-03-15
+"87",0.54,9.47,117,6.76,0.88,34.64,41.06,35.06,0.0115,0.25,"NA","NA","rain","Rain in the morning and evening.",1008.6,NA,2016-03-14
+"88",0.19,10,159,0.69,0.75,30.03,45.99,29.82,1e-04,0.22,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",996,NA,2016-03-13
+"89",0.2,10,323,1.34,0.75,31.24,47.13,31.98,0,0.18,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",993.16,NA,2016-03-12
+"90",0.22,10,122,3.34,0.69,31.88,48.07,34.59,0,0.14,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",991.77,NA,2016-03-11
+"91",0.26,9.48,92,4.09,0.71,33.38,48.02,36.52,0.0033,0.11,"NA","NA","rain","Light rain in the morning.",999.75,NA,2016-03-10
+"92",0.35,8.78,153,0.84,0.82,32.87,45.78,30.97,4e-04,0.07,"NA","NA","rain","Light rain overnight.",991.33,NA,2016-03-09
+"93",0.69,9.61,100,3.88,0.89,35.24,40.97,34.9,0.0016,0.03,"NA","NA","rain","Drizzle in the afternoon.",996.92,NA,2016-03-08
+"94",0.73,9.57,123,3.64,0.88,35.43,43.74,34.14,0.0084,0.99,"NA","NA","rain","Light rain in the morning.",999.8,NA,2016-03-07
+"95",0.68,9.82,124,3.24,0.7,29.87,44.97,34.13,0.0029,0.95,"NA","NA","rain","Rain starting in the evening.",995.37,NA,2016-03-06
+"96",0.29,10,152,4.21,0.71,33.12,45.17,36.96,0,0.92,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",987.58,NA,2016-03-05
+"97",0.4,9.94,166,3,0.86,36.38,45.68,34.15,0.0022,0.88,"NA","NA","rain","Light rain in the morning.",990.13,NA,2016-03-04
+"98",0.61,9.99,132,9.13,0.68,30.96,45.1,32.96,1e-04,0.85,"NA","NA","wind","Breezy in the morning.",991.04,NA,2016-03-03
+"99",0.31,9.85,142,3.13,0.68,27.94,41,34.94,0,0.81,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1001.09,NA,2016-03-02
+"100",0.07,10,151,2.62,0.7,29.82,44.19,30.61,0,0.78,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1007.34,NA,2016-03-01
+"101",0.19,8.98,285,3.73,0.84,30.84,43.92,28.02,1e-04,0.75,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon, continuing until evening.",1010.94,NA,2016-02-29
+"102",0.28,9.85,116,4.39,0.89,34.65,41.15,33.68,1e-04,0.72,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1015.33,NA,2016-02-28
+"103",NA,8.62,116,3.5,0.9,37.24,45.81,37.99,0.0163,0.69,"NA","NA","rain","Light rain until evening.",1001.63,NA,2016-02-27
+"104",0.73,9.9,116,4.93,0.79,36.82,46.86,39.95,0.0011,0.66,"NA","NA","clear-day","Clear throughout the day.",1005.43,NA,2016-02-26
+"105",NA,9.76,111,7.15,0.88,39.01,45,40.03,0.0108,0.63,"NA","NA","rain","Rain in the morning and afternoon.",1004.68,NA,2016-02-25
+"106",NA,9.42,116,6,0.9,38.05,42.22,39.11,0.0139,0.6,"NA","NA","rain","Light rain in the morning and evening.",1009.11,NA,2016-02-24
+"107",NA,9.88,122,6.24,0.8,33.41,41.92,36.15,0.0091,0.57,"NA","NA","rain","Light rain in the morning and afternoon.",1014.05,NA,2016-02-23
+"108",0.37,10,82,1.18,0.81,29.98,41.58,28.81,0,0.54,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1022.15,NA,2016-02-22
+"109",0.29,9.91,122,3.93,0.87,34.08,41.08,32.96,0.0011,0.51,"NA","NA","rain","Drizzle in the morning.",1026.81,NA,2016-02-21
+"110",NA,10,124,7.96,0.73,34.64,48.92,37.94,0.0013,0.47,"NA","NA","rain","Breezy in the morning and light rain overnight.",1011.83,NA,2016-02-20
+"111",NA,8.5,114,6.03,0.82,31.31,41.93,31.04,0.0035,0.44,"NA","NA","snow","Light snow (under 1 in.) in the morning.",1011.93,NA,2016-02-19
+"112",0.46,9.83,112,5.57,0.62,18.42,33.95,26.77,0,0.41,"NA","NA","snow","Snow (under 1 in.) overnight.",998.83,NA,2016-02-18
+"113",0.12,9.98,132,1.71,0.72,20.12,34.99,21,1e-04,0.38,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",992.05,NA,2016-02-17
+"114",0.21,10,313,1.8,0.82,30.38,39.91,28.8,0,0.34,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon, continuing until evening.",997.95,NA,2016-02-16
+"115",0.32,9.57,288,2.12,0.9,35.04,43.88,33.81,0,0.31,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1000.28,NA,2016-02-15
+"116",0.44,9.41,92,3.05,0.91,35.98,42,35.79,0.0026,0.27,"NA","NA","rain","Light rain in the morning.",1005.98,NA,2016-02-14
+"117",NA,9.51,154,2.49,0.89,36.59,42.03,38.08,0.0055,0.23,"NA","NA","rain","Light rain overnight.",1002.55,NA,2016-02-13
+"118",NA,9.96,118,6.3,0.84,36.25,44.04,39.03,7e-04,0.19,"NA","NA","rain","Light rain overnight.",1005.41,NA,2016-02-12
+"119",NA,9.85,121,9.35,0.87,39.44,50.11,40.03,0.0051,0.16,"NA","NA","rain","Rain in the morning.",1006.3,NA,2016-02-11
+"120",0.77,9.31,105,5.39,0.87,41.12,50.29,40.95,0.005,0.12,"NA","NA","rain","Light rain in the morning.",1012.83,NA,2016-02-10
+"121",NA,8.58,138,4.49,0.92,38.37,49.18,38.02,0.0075,0.08,"NA","NA","rain","Light rain in the morning and evening.",1008.12,NA,2016-02-09
+"122",0.31,9.99,289,1.47,0.89,36.67,49.18,35.84,4e-04,0.04,"NA","NA","rain","Light rain overnight.",1015.84,NA,2016-02-08
+"123",0.65,6.75,118,4.82,0.92,37.65,47.91,36.97,0.0055,0.01,"NA","NA","rain","Light rain until afternoon, starting again in the evening.",1015.56,NA,2016-02-07
+"124",0.7,8.73,118,6.55,0.88,33.76,39.67,34,0.0023,0.97,"NA","NA","clear-day","Clear throughout the day.",1019.34,NA,2016-02-06
+"125",0.41,9.58,131,4.57,0.92,33.54,37.14,34.96,0.0048,0.94,"NA","NA","rain","Light rain in the morning.",1017.98,NA,2016-02-05
+"126",0.44,9.51,120,3.59,0.93,33.79,38.09,34.07,0.0028,0.9,"NA","NA","rain","Light rain overnight.",999.84,NA,2016-02-04
+"127",0.75,9.18,98,6.68,0.9,35.52,40.12,36.13,0.0107,0.87,"NA","NA","rain","Light rain throughout the day.",998.66,NA,2016-02-03
+"128",NA,7.47,111,5.31,0.95,33.71,39.58,32.56,0.0033,0.84,"NA","NA","rain","Light rain in the afternoon and evening.",1004.41,NA,2016-02-02
+"129",NA,6.96,120,4.79,0.86,30.6,35.93,33.11,0.0027,0.8,"NA","NA","rain","Light rain in the afternoon.",1016.54,NA,2016-02-01
+"130",0.55,9.73,120,4.03,0.85,29.57,36.91,27.96,0,0.77,"NA","NA","clear-day","Clear throughout the day.",1018.13,NA,2016-01-31
+"131",0.41,7.53,284,3.1,0.94,30.45,36.02,28.87,0,0.74,"NA","NA","partly-cloudy-night","Partly cloudy starting in the afternoon.",1017.57,NA,2016-01-30
+"132",NA,9.24,287,1.44,0.93,33.19,38.01,32.04,0,0.71,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1007.88,NA,2016-01-29
+"133",0.37,9.65,114,3.52,0.9,36.51,41.95,35.89,0.0015,0.68,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",998.45,NA,2016-01-28
+"134",NA,8.81,100,9.48,0.89,39.02,43.08,40.11,0.0213,0.65,"NA","NA","rain","Rain until afternoon, starting again in the evening.",991.97,NA,2016-01-27
+"135",0.71,8.93,109,7.25,0.86,39.61,48.77,41.16,0.0157,0.62,"NA","NA","rain","Rain throughout the day.",992.54,NA,2016-01-26
+"136",0.69,8.63,107,10.2,0.89,38.6,45.87,39.22,0.034,0.59,"NA","NA","rain","Rain until afternoon, starting again overnight, and breezy in the morning.",997.54,NA,2016-01-25
+"137",NA,7.99,124,6.83,0.92,35.86,40.05,37.1,0.0355,0.56,"NA","NA","rain","Rain throughout the day.",1001.67,NA,2016-01-24
+"138",NA,8.38,105,6.89,0.89,35.4,40.04,36.13,0.0179,0.53,"NA","NA","rain","Rain throughout the day.",1009.1,NA,2016-01-23
+"139",0.57,8.69,105,6.55,0.9,36.4,40.3,37.07,0.0103,0.49,"NA","NA","rain","Light rain until afternoon.",1006.45,NA,2016-01-22
+"140",0.64,9.54,116,5.66,0.9,36.66,40.1,37.97,0.0027,0.46,"NA","NA","rain","Light rain in the morning and overnight.",999.95,NA,2016-01-21
+"141",0.72,9.34,126,9.42,0.85,34.33,41.89,36.13,0.0067,0.43,"NA","NA","rain","Light rain starting in the afternoon.",995.44,NA,2016-01-20
+"142",0.6,9.13,133,5.08,0.94,35.23,43.38,34.09,4e-04,0.39,"NA","NA","wind","Partly cloudy starting in the evening and breezy overnight.",1007.62,NA,2016-01-19
+"143",NA,8.48,86,1.52,0.94,34.26,37.99,32.13,0.0011,0.36,"NA","NA","rain","Light rain in the morning.",1003.16,NA,2016-01-18
+"144",0.6,8.65,75,3.02,0.89,33.75,41.78,31.21,0.0026,0.32,"NA","NA","rain","Light rain in the morning.",1000.98,NA,2016-01-17
+"145",0.41,10,122,13.19,0.79,32.48,43.64,34.91,0,0.28,"NA","NA","wind","Partly cloudy in the morning and breezy starting in the afternoon.",995.89,NA,2016-01-16
+"146",0.35,9.05,134,5.82,0.85,32.78,40.29,32.03,4e-04,0.25,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",999.17,NA,2016-01-15
+"147",0.54,6.59,39,1.36,0.95,33.96,38.11,31.17,4e-04,0.21,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1008.66,NA,2016-01-14
+"148",NA,7.67,115,3.35,0.95,36.32,39.03,36.98,0.0361,0.17,"NA","NA","rain","Rain until evening.",1008.59,NA,2016-01-13
+"149",NA,5.83,71,2.68,0.98,37.41,46.31,35.92,0.0038,0.13,"NA","NA","rain","Rain overnight.",995.3,NA,2016-01-12
+"150",0.66,7.75,82,1.42,0.95,37.95,43.85,36.04,0.0043,0.1,"NA","NA","rain","Light rain in the evening.",997.05,NA,2016-01-11
+"151",NA,5.38,116,4.9,0.95,36.7,42.87,35.97,0.0219,0.06,"NA","NA","rain","Rain until afternoon, starting again in the evening.",1003.9,NA,2016-01-10
+"152",0.77,6.31,103,2.01,0.96,34.49,36.97,34.11,0.0025,0.03,"NA","NA","rain","Light rain in the evening and overnight.",1014.87,NA,2016-01-09
+"153",0.69,9.68,125,6.89,0.93,32.62,35.14,30.97,0.0085,0.98,"NA","NA","rain","Light rain until afternoon.",1013.99,NA,2016-01-08
+"154",0.35,10,37,1.31,0.93,25.6,30.98,24.7,0,0.95,"NA","NA","rain","Mixed precipitation overnight.",1012.77,NA,2016-01-07
+"155",0.24,10,336,2.28,0.91,24.89,32.74,22.95,0,0.92,"NA","NA","partly-cloudy-night","Partly cloudy throughout the day.",1015.84,NA,2016-01-06
+"156",0.14,10,73,1.23,0.92,31.03,38.84,26.62,0,0.89,"NA","NA","partly-cloudy-night","Partly cloudy throughout the day.",1009.38,NA,2016-01-05
+"157",0.12,8.88,325,2.71,0.92,24.93,30.95,24.89,0,0.86,"NA","NA","fog","Foggy in the morning.",1005.53,NA,2016-01-04
+"158",0.22,7.57,344,2.47,0.92,27.2,33.91,26.85,0,0.83,"NA","NA","fog","Foggy starting in the afternoon, continuing until evening.",1011.14,NA,2016-01-03
+"159",0.32,4.58,359,1.8,0.97,32.72,37,29.97,0,0.8,"NA","NA","fog","Foggy starting in the afternoon, continuing until evening.",1016.47,NA,2016-01-02
+"160",0.57,8.48,113,7.7,0.87,33.94,43.81,35.97,0.0189,0.77,"NA","NA","rain","Rain until afternoon.",1016.21,NA,2016-01-01
+"161",NA,9.15,106,6.09,0.86,34.38,41.01,35.99,0.0046,0.74,"NA","NA","rain","Light rain in the afternoon.",1019.41,NA,2015-12-31
+"162",NA,8.88,108,10.68,0.75,31.82,42.89,36.12,0.0067,0.71,"NA","NA","rain","Rain in the afternoon and evening.",1021.46,NA,2015-12-30
+"163",0.66,8.75,129,7.58,0.86,29.12,37,31.08,0,0.68,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1025.66,NA,2015-12-29
+"164",NA,7.14,105,3.6,0.93,31.79,35.11,31.18,0.0092,0.65,"NA","NA","rain","Light rain in the morning.",1022.17,NA,2015-12-28
+"165",NA,8.76,129,8.46,0.85,26.89,33,27.97,8e-04,0.62,"NA","NA","rain","Mixed precipitation overnight.",1018.62,NA,2015-12-27
+"166",NA,8.33,23,2.59,0.94,28.91,31.99,28.93,0.0013,0.59,"NA","NA","fog","Foggy in the morning.",1017.46,NA,2015-12-26
+"167",NA,3.55,123,4.29,0.93,25.95,29.86,25.98,0.0138,0.55,"NA","NA","snow","Snow (2–4 in.) until afternoon.",1011.61,NA,2015-12-25
+"168",0.46,9.6,136,2.08,0.83,17.39,26.84,17.87,4e-04,0.52,"NA","NA","snow","Light snow (under 1 in.) overnight.",1023.07,NA,2015-12-24
+"169",0.33,10,356,1.44,0.88,22.52,29.17,19.92,0,0.48,"NA","NA","partly-cloudy-night","Partly cloudy throughout the day.",1014.29,NA,2015-12-23
+"170",NA,9.8,86,2.99,0.88,28.4,33.11,30.17,0,0.45,"NA","NA","clear-day","Clear throughout the day.",999.62,NA,2015-12-22
+"171",NA,8.82,115,5.71,0.9,30.11,34.06,32.11,0.0029,0.41,"NA","NA","clear-day","Clear throughout the day.",994.08,NA,2015-12-21
+"172",NA,9.08,101,6.45,0.78,29.71,38.02,32.12,0.0013,0.37,"NA","NA","rain","Light rain overnight.",990.39,NA,2015-12-20
+"173",NA,7.25,90,5.21,0.86,30.85,36.93,32.67,0.0038,0.34,"NA","NA","rain","Light rain in the morning and evening.",986.61,NA,2015-12-19
+"174",NA,10,123,9.72,0.64,24.95,37.94,33.92,0,0.3,"NA","NA","wind","Breezy starting in the evening.",989.68,NA,2015-12-18
+"175",NA,8.86,119,2.2,0.87,30.76,38.59,32.05,0,0.26,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",999.16,NA,2015-12-17
+"176",NA,9.92,129,12.11,0.84,34.04,40.71,36.76,0,0.22,"NA","NA","clear-day","Clear throughout the day.",998.08,NA,2015-12-16
+"177",NA,10,66,2.6,0.9,32.45,36.98,32.94,0,0.19,"NA","NA","clear-day","Clear throughout the day.",1017.13,NA,2015-12-15
+"178",NA,9.83,92,2.26,0.89,33,36.5,35.02,9e-04,0.15,"NA","NA","clear-day","Clear throughout the day.",1019.71,NA,2015-12-14
+"179",NA,7.09,111,6.67,0.88,29.67,35.97,29.12,0.0038,0.11,"NA","NA","fog","Foggy in the morning.",1011.88,NA,2015-12-13
+"180",0.35,9.96,23,0.9,0.93,25.94,29.93,24.87,0,0.08,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1008.11,NA,2015-12-12
+"181",NA,7.07,310,1.22,0.95,29.54,32.72,28.14,0.0033,0.05,"NA","NA","snow","Snow (under 1 in.) in the morning.",999.9,NA,2015-12-11
+"182",0.33,9.35,343,1.48,0.92,27.32,30.94,27.85,0,0.02,"NA","NA","partly-cloudy-night","Partly cloudy until afternoon.",1000.81,NA,2015-12-10
+"183",0.39,10,313,1.61,0.95,32.3,38.05,29.8,4e-04,0.97,"NA","NA","partly-cloudy-night","Partly cloudy starting in the afternoon.",994.04,NA,2015-12-09
+"184",NA,9.38,109,5.28,0.89,35.61,40.02,37.1,0.01,0.95,"NA","NA","rain","Light rain in the morning and evening.",989.5,NA,2015-12-08
+"185",NA,7.64,133,4.76,0.9,36.02,44.28,34.02,0.0035,0.92,"NA","NA","rain","Light rain starting in the evening.",983.13,NA,2015-12-07
+"186",NA,4.6,102,1.8,0.95,33.36,38.97,32.98,0.0121,0.89,"NA","NA","rain","Light rain until afternoon, starting again in the evening.",992.52,NA,2015-12-06
+"187",0.71,9.5,41,2.75,0.94,33.94,40.54,28.19,0,0.86,"NA","NA","rain","Breezy in the morning and light rain overnight.",987.9,NA,2015-12-05
+"188",0.54,8.53,3,11.55,0.94,28.75,33.51,27.19,0,0.83,"NA","NA","wind","Breezy in the morning and partly cloudy starting in the evening.",997.88,NA,2015-12-04
+"189",0.32,7.94,27,4.88,0.93,27.52,32.18,27.92,0,0.8,"NA","NA","fog","Foggy starting in the afternoon, continuing until evening.",999,NA,2015-12-03
+"190",NA,3.56,323,2.87,0.97,33.75,37.88,29.98,0,0.77,"NA","NA","fog","Foggy throughout the day.",993.01,NA,2015-12-02
+"191",NA,9.31,99,1.51,0.94,37.23,40.1,37.01,0.0071,0.74,"NA","NA","rain","Light rain in the morning.",997.14,NA,2015-12-01
+"192",NA,9.63,109,4.25,0.9,36.96,41.05,36.23,0.0067,0.7,"NA","NA","rain","Light rain until afternoon, starting again overnight.",996.37,NA,2015-11-30
+"193",NA,9.67,88,6.36,0.89,38,42,40.08,0.0175,0.67,"NA","NA","rain","Light rain throughout the day.",1003.33,NA,2015-11-29
+"194",NA,7.22,100,10.97,0.74,34.65,46.88,40.06,0.0488,0.64,"NA","NA","rain","Rain in the morning and overnight.",1009.32,NA,2015-11-28
+"195",NA,5.99,110,8.18,0.89,35.94,42.02,36.1,0.0567,0.61,"NA","NA","rain","Rain throughout the day.",1015.92,NA,2015-11-27
+"196",0.57,9.33,114,7.2,0.78,32.02,44.76,28.85,0.0071,0.57,"NA","NA","rain","Rain overnight.",1023.28,NA,2015-11-26
+"197",0.45,10,127,5.02,0.92,30.75,37.39,28.85,0,0.54,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1026.51,NA,2015-11-25
+"198",NA,6.08,78,2.41,0.96,31.65,34.98,31.12,0,0.51,"NA","NA","fog","Foggy until afternoon.",1031.24,NA,2015-11-24
+"199",NA,8.23,65,3.14,0.88,28.23,32.98,28.99,8e-04,0.46,"NA","NA","snow","Light snow in the evening.",1033.18,NA,2015-11-23
+"200",0.32,10,339,4.56,0.92,25.43,30.75,23.99,0,0.43,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1028.54,NA,2015-11-22
+"201",NA,8.21,144,1.63,0.88,30.41,38.06,30.94,0.0079,0.39,"NA","NA","rain","Mixed precipitation in the morning and evening.",1020.44,NA,2015-11-21
+"202",NA,8.04,156,6.15,0.77,35.09,46.06,36.2,0.0163,0.35,"NA","NA","rain","Light rain in the morning.",1011.52,NA,2015-11-20
+"203",NA,7.91,116,10.33,0.88,35.85,41,35.67,0.0283,0.31,"NA","NA","rain","Rain in the morning and afternoon.",1019.24,NA,2015-11-19
+"204",NA,6.82,52,4.14,0.9,27.11,34.84,26.09,0.0021,0.28,"NA","NA","snow","Light snow (under 1 in.) in the afternoon.",1024.22,NA,2015-11-18
+"205",NA,4.7,306,3.02,0.92,26.94,31.02,28.02,0.0108,0.24,"NA","NA","snow","Snow (1–2 in.) in the morning.",1010.98,NA,2015-11-17
+"206",NA,6.77,66,0.39,0.92,28.4,36,29.01,0.0096,0.2,"NA","NA","snow","Snow (1–3 in.) until afternoon, starting again overnight.",998.53,NA,2015-11-16
+"207",NA,8.7,92,1.98,0.83,29.24,36.89,31.1,0.0017,0.17,"NA","NA","snow","Snow (under 1 in.) overnight.",991.15,NA,2015-11-15
+"208",NA,8.33,120,5,0.92,32.08,35.85,32.23,0.0075,0.13,"NA","NA","rain","Light rain in the morning and afternoon.",1002.15,NA,2015-11-14
+"209",NA,7.21,100,5.75,0.9,34.42,39.97,34.03,0.0113,0.1,"NA","NA","rain","Rain until afternoon, starting again in the evening.",997.73,NA,2015-11-13
+"210",NA,6.43,106,11.11,0.87,34.96,41.02,37.06,0.0525,0.07,"NA","NA","rain","Rain throughout the day.",984.31,NA,2015-11-12
+"211",NA,5.73,112,16.64,0.88,36.35,41.02,38.5,0.0379,0.04,"NA","NA","rain","Rain throughout the day and breezy in the morning.",979.96,NA,2015-11-11
+"212",NA,9.55,120,8.17,0.86,33.53,39.34,35.09,0.0071,0.01,"NA","NA","rain","Rain in the morning and evening and breezy starting in the evening.",1004.19,NA,2015-11-10
+"213",NA,9.03,124,2.21,0.91,35.88,41.01,36.1,0.0179,0.97,"NA","NA","rain","Rain in the morning.",994.57,NA,2015-11-09
+"214",NA,6.63,106,10.46,0.88,38.21,42.5,41.02,0.0238,0.94,"NA","NA","rain","Rain throughout the day.",1006.69,NA,2015-11-08
+"215",NA,9.75,111,3.99,0.9,37.54,41.5,39.1,0.0046,0.91,"NA","NA","rain","Rain in the morning.",1011.4,NA,2015-11-07
+"216",NA,9.16,112,11.6,0.87,39.02,43.5,41.34,0.0188,0.88,"NA","NA","rain","Rain until evening, starting again overnight, and breezy in the morning.",1002.05,NA,2015-11-06
+"217",NA,8.7,109,10.32,0.9,39.69,44.17,39.5,0.0133,0.85,"NA","NA","rain","Light rain until afternoon, starting again in the evening.",999.08,NA,2015-11-05
+"218",NA,6.08,96,6.4,0.91,33.85,41.34,32.01,0.0138,0.82,"NA","NA","rain","Rain and breezy starting in the evening.",1014.15,NA,2015-11-04
+"219",NA,7.59,327,0.87,0.92,37.69,44.08,32.22,0.0096,0.79,"NA","NA","rain","Light rain in the morning and afternoon.",1009.96,NA,2015-11-03
+"220",NA,6.66,109,7.91,0.91,38.48,45.01,36.99,0.0229,0.76,"NA","NA","rain","Rain throughout the day.",1008.92,NA,2015-11-02
+"221",NA,9.46,29,2.04,0.93,34.06,37.98,30.93,0.0017,0.73,"NA","NA","rain","Light rain in the afternoon and evening.",1013.69,NA,2015-11-01
+"222",0.21,10,317,3.49,0.89,35.74,45.91,31.92,0,0.69,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1004.96,NA,2015-10-31
+"223",0.35,6.97,316,1.97,0.93,39.39,45.09,37,4e-04,0.66,"NA","NA","fog","Foggy in the morning.",992.87,NA,2015-10-30
+"224",NA,8.64,117,2.82,0.93,40.41,43.5,41.09,0.02,0.62,"NA","NA","rain","Rain in the morning and evening.",990.63,NA,2015-10-29
+"225",NA,8.88,102,5.68,0.93,42.42,46.67,43.11,0.0117,0.59,"NA","NA","rain","Light rain in the morning and evening.",995.66,NA,2015-10-28
+"226",NA,9.88,122,3.69,0.88,39.41,46.08,37.97,0.0021,0.55,"NA","NA","rain","Light rain in the morning and overnight.",1001.12,NA,2015-10-27
+"227",0.57,8.68,349,1.49,0.91,34.78,43.03,30.98,0,0.52,"NA","NA","fog","Foggy in the morning.",1012.32,NA,2015-10-26
+"228",0.31,9.22,334,2.11,0.91,36.27,46.93,33.87,0,0.48,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1017.51,NA,2015-10-25
+"229",0.39,5.11,296,2.85,0.94,37.55,44.02,36.83,0,0.44,"NA","NA","fog","Foggy in the morning.",1015.3,NA,2015-10-24
+"230",NA,8.32,118,1.28,0.92,40.49,45.03,39.08,0,0.4,"NA","NA","fog","Foggy starting in the evening.",1018.45,NA,2015-10-23
+"231",NA,9.79,126,4.79,0.92,42.79,46.1,44.09,0.0025,0.36,"NA","NA","rain","Light rain in the afternoon.",1018.64,NA,2015-10-22
+"232",NA,7.6,120,9.66,0.9,44.46,49.04,46.02,0.0213,0.33,"NA","NA","rain","Rain throughout the day.",1009.81,NA,2015-10-21
+"233",NA,6.99,111,9.09,0.91,43.86,49.09,43.1,0.0196,0.29,"NA","NA","rain","Rain starting in the afternoon.",1000.16,NA,2015-10-20
+"234",NA,8.86,108,4.25,0.91,42.11,47.89,43.09,0.0125,0.25,"NA","NA","rain","Rain throughout the day.",1007.2,NA,2015-10-19
+"235",NA,9.83,136,3.16,0.89,43.29,47.11,45.06,0.0025,0.22,"NA","NA","rain","Light rain in the evening and overnight.",1015.08,NA,2015-10-18
+"236",NA,9.13,117,5.4,0.92,46.16,51.93,46.17,0.0233,0.18,"NA","NA","rain","Rain until evening.",1005.86,NA,2015-10-17
+"237",NA,8.38,120,8.02,0.91,48.43,52.92,49.1,0.02,0.15,"NA","NA","rain","Rain in the morning and afternoon.",1001.82,NA,2015-10-16
+"238",NA,7.87,23,3.13,0.94,43.49,51.81,42,0.0092,0.12,"NA","NA","rain","Rain in the evening.",1006.01,NA,2015-10-15
+"239",NA,8.73,5,4.6,0.96,40.44,43.09,38.96,0.0125,0.09,"NA","NA","rain","Rain throughout the day.",1018.92,NA,2015-10-14
+"240",0.57,9.73,111,2,0.89,41.49,48.06,39.9,0.0021,0.06,"NA","NA","rain","Light rain in the morning.",1025.84,NA,2015-10-13
+"241",NA,8.62,109,7.04,0.88,42.32,47.94,44.02,0.0158,0.03,"NA","NA","rain","Rain until evening.",1012.01,NA,2015-10-12
+"242",NA,8.28,112,12.05,0.87,44.55,49.95,46.03,0.0258,0.99,"NA","NA","rain","Rain throughout the day.",997.59,NA,2015-10-11
+"243",NA,9.16,104,7.14,0.82,44.26,54.76,46.09,0.0167,0.96,"NA","NA","rain","Rain starting in the afternoon and breezy overnight.",994.69,NA,2015-10-10
+"244",NA,9.82,148,2.5,0.87,46.06,53.93,47.08,0.0017,0.93,"NA","NA","rain","Light rain overnight.",991.66,NA,2015-10-09
+"245",NA,6.59,110,4.19,0.93,51.9,58.63,48.1,0.0425,0.9,"NA","NA","rain","Rain throughout the day.",982.72,NA,2015-10-08
+"246",NA,7.05,74,3.31,0.95,46.26,52.07,46.05,0.0242,0.87,"NA","NA","rain","Rain until evening.",1002.53,NA,2015-10-07
+"247",NA,10,21,2.29,0.84,41.11,50.01,42.94,0,0.84,"NA","NA","clear-day","Clear throughout the day.",1011.48,NA,2015-10-06
+"248",0.4,9.95,345,1.96,0.8,35.41,50.03,34.81,0,0.81,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1013.51,NA,2015-10-05
+"249",0.27,10,299,3.81,0.8,37.04,56.83,38.48,0,0.78,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1017.37,NA,2015-10-04
+"250",0.38,10,293,3.98,0.82,38.48,49.02,39.96,0,0.74,"NA","NA","partly-cloudy-night","Partly cloudy starting in the afternoon.",1022.57,NA,2015-10-03
+"251",0.25,10,273,1.45,0.79,34.76,47.98,35.91,0,0.71,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon, continuing until evening.",1030.19,NA,2015-10-02
+"252",0.28,10,308,2.51,0.77,33.28,48.99,34.8,0,0.68,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1034.65,NA,2015-10-01
+"253",0.48,10,277,0.76,0.87,40.24,51.06,38.96,0.0013,0.64,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1023.97,NA,2015-09-30
+"254",0.61,9.46,118,3.57,0.86,42.57,51.93,42.11,0.0254,0.6,"NA","NA","rain","Light rain in the morning and evening.",1010.97,NA,2015-09-29
+"255",NA,6.57,114,13,0.9,51.45,56.01,53.01,0.0463,0.57,"NA","NA","rain","Heavy rain in the morning and evening.",1005.14,NA,2015-09-28
+"256",NA,4.05,117,13.12,0.93,50.76,53.34,51.03,0.0425,0.53,"NA","NA","rain","Rain in the morning and afternoon and breezy in the afternoon.",1011.77,NA,2015-09-27
+"257",NA,7.89,133,4.9,0.94,45.83,50.1,46.11,0.0042,0.49,"NA","NA","rain","Light rain overnight.",1016.97,NA,2015-09-26
+"258",NA,6.66,114,5.64,0.9,42.73,47.1,43.12,0.0321,0.45,"NA","NA","rain","Rain until afternoon, starting again in the evening.",1013.32,NA,2015-09-25
+"259",0.73,10,133,5.15,0.86,41.38,49.03,41.72,0,0.41,"NA","NA","clear-day","Clear throughout the day.",1012.25,NA,2015-09-24
+"260",0.54,8.92,136,2.1,0.88,40.98,47.02,40.07,8e-04,0.38,"NA","NA","fog","Foggy in the morning.",1004.74,NA,2015-09-23
+"261",NA,8.71,288,1,0.85,41.86,54.92,39.92,0,0.34,"NA","NA","rain","Light rain overnight.",1007.66,NA,2015-09-22
+"262",0.45,7.58,107,0.72,0.85,39.95,54.9,37.8,0.0013,0.3,"NA","NA","rain","Light rain starting in the evening.",1006.49,NA,2015-09-21
+"263",NA,9.48,111,3.42,0.89,41.43,46.09,43.06,0.0075,0.27,"NA","NA","rain","Light rain in the morning and afternoon.",1011.28,NA,2015-09-20
+"264",NA,8.7,135,4.29,0.9,42.72,47.17,43.97,0.0179,0.24,"NA","NA","rain","Rain in the morning and afternoon.",1008.79,NA,2015-09-19
+"265",NA,9.63,111,4.16,0.88,42.98,49.01,44.09,0.0083,0.2,"NA","NA","rain","Rain starting in the afternoon.",1003.67,NA,2015-09-18
+"266",NA,7.9,133,4.03,0.89,44.79,50.95,45.1,0.0571,0.17,"NA","NA","rain","Heavy rain until afternoon.",995.97,NA,2015-09-17
+"267",NA,7.81,125,8.1,0.91,47.29,51.03,47.18,0.0354,0.14,"NA","NA","rain","Rain throughout the day.",1000.39,NA,2015-09-16
+"268",NA,7.73,111,5.4,0.91,45.03,49.03,46.11,0.0421,0.11,"NA","NA","rain","Rain in the morning and afternoon.",1003.61,NA,2015-09-15
+"269",NA,9.04,117,4.14,0.87,44.02,50.09,46.11,0.0154,0.08,"NA","NA","rain","Rain in the morning and evening.",1004.8,NA,2015-09-14
+"270",NA,9.23,131,5.55,0.89,43.31,50.07,42.92,0.0029,0.05,"NA","NA","rain","Light rain starting in the evening.",1009.55,NA,2015-09-13
+"271",0.51,9.55,233,0.74,0.88,45.66,55.06,43.98,0.0042,0.02,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1017.56,NA,2015-09-12
+"272",NA,9.92,130,3.25,0.92,47.64,51.12,48.03,0.0033,0.99,"NA","NA","rain","Light rain overnight.",1018.13,NA,2015-09-11
+"273",NA,8.78,144,2.8,0.9,51.24,57.92,51.08,0.0075,0.96,"NA","NA","rain","Light rain in the evening.",1013.53,NA,2015-09-10
+"274",NA,5.02,114,12.24,0.9,51.84,57.92,52.02,0.0638,0.93,"NA","NA","rain","Rain throughout the day and breezy in the evening.",1011.2,NA,2015-09-09
+"275",NA,8.81,136,3.86,0.88,47.83,56.05,48.99,0.0021,0.89,"NA","NA","rain","Rain in the evening and overnight.",1012.9,NA,2015-09-08
+"276",NA,9.67,162,0.57,0.9,46.98,55.88,47.12,0,0.86,"NA","NA","clear-day","Clear throughout the day.",1012.11,NA,2015-09-07
+"277",NA,7.64,126,3.55,0.94,48.44,52.26,48.18,0.0221,0.83,"NA","NA","rain","Rain until afternoon.",1014.27,NA,2015-09-06
+"278",NA,9.83,136,4.93,0.86,46.29,54.06,49.17,0.0021,0.8,"NA","NA","rain","Light rain in the afternoon and overnight.",1015,NA,2015-09-05
+"279",NA,10,130,3.54,0.8,46.11,58.09,49.05,0.0017,0.76,"NA","NA","rain","Light rain in the morning.",1014.38,NA,2015-09-04
+"280",0.59,10,125,3.78,0.7,41.62,58.18,45.83,0,0.72,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1016.92,NA,2015-09-03
+"281",0.25,10,310,1.67,0.71,41.93,63.95,42,0,0.69,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1018.51,NA,2015-09-02
+"282",0.34,10,323,2.79,0.67,39.15,61.95,41.88,0,0.65,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1012.75,NA,2015-09-01
+"283",0.38,9.88,325,2.3,0.72,39.49,59.97,41.97,0,0.61,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1004.62,NA,2015-08-31
+"284",NA,6.96,104,3.98,0.92,44.91,49.95,45.05,0.03,0.58,"NA","NA","rain","Rain in the morning and afternoon.",995.57,NA,2015-08-30
+"285",NA,8.38,108,5.66,0.92,46.55,50.5,46.34,0.0425,0.54,"NA","NA","rain","Rain throughout the day.",984.91,NA,2015-08-29
+"286",NA,9.84,332,6.79,0.92,48.16,52.17,49.17,0.0046,0.49,"NA","NA","clear-day","Clear throughout the day.",993.35,NA,2015-08-28
+"287",NA,9.26,320,2.92,0.92,50.25,55.76,51,0.0154,0.46,"NA","NA","rain","Light rain throughout the day.",996.07,NA,2015-08-27
+"288",NA,6.52,111,7.17,0.9,49.89,57.66,51.11,0.0421,0.43,"NA","NA","rain","Rain throughout the day.",1008.55,NA,2015-08-26
+"289",0.25,10,205,1.46,0.72,45.01,63.38,46.81,0,0.39,"NA","NA","rain","Rain overnight.",1018.63,NA,2015-08-25
+"290",0.21,10,273,2.95,0.79,47.88,68.77,44.91,0,0.35,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1020.1,NA,2015-08-24
+"291",0.57,9.42,270,1.07,0.83,49.45,61.93,49.24,0.0067,0.32,"NA","NA","rain","Light rain in the morning.",1016.35,NA,2015-08-23
+"292",NA,8.35,117,9.84,0.88,50.29,54.95,51.09,0.0267,0.29,"NA","NA","rain","Rain throughout the day.",1009.58,NA,2015-08-22
+"293",NA,8.26,115,9.7,0.83,50.2,58.01,52.11,0.0338,0.25,"NA","NA","rain","Rain in the morning and evening.",1006.61,NA,2015-08-21
+"294",0.47,8.51,129,5.24,0.82,47.29,60.32,47.2,0,0.22,"NA","NA","rain","Rain overnight.",1015.3,NA,2015-08-20
+"295",0.57,9.54,212,0.94,0.86,51.07,61.08,51.94,0.0096,0.19,"NA","NA","rain","Rain in the morning.",1014.36,NA,2015-08-19
+"296",NA,7.63,134,5.35,0.9,51.91,56.17,54.08,0.0042,0.16,"NA","NA","rain","Light rain in the morning and evening.",1016.26,NA,2015-08-18
+"297",NA,7.4,132,7.98,0.89,54.87,60.08,56.14,0.0454,0.13,"NA","NA","rain","Rain in the morning and evening.",1014.85,NA,2015-08-17
+"298",NA,7.97,131,6.34,0.94,52.71,59.02,52.18,0.0129,0.1,"NA","NA","rain","Rain in the morning and overnight.",1022.3,NA,2015-08-16
+"299",NA,9.08,133,4.17,0.85,51.16,58.02,54.1,0.0025,0.07,"NA","NA","rain","Rain in the morning and overnight.",1023.44,NA,2015-08-15
+"300",0.26,10,229,1.21,0.68,46.01,73,47.87,0,0.04,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1020.06,NA,2015-08-14
+"301",0.39,9.62,282,3.57,0.73,47.88,70.62,46.87,0,0.01,"NA","NA","partly-cloudy-night","Partly cloudy in the morning.",1019.94,NA,2015-08-13
+"302",0.36,10,291,4.06,0.78,49.1,66.97,50.99,0,0.98,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1019.77,NA,2015-08-12
+"303",NA,7.69,158,0.8,0.93,52.31,56.06,52,0.0275,0.94,"NA","NA","rain","Rain until afternoon.",1010.74,NA,2015-08-11
+"304",NA,7.72,137,8.52,0.93,53.72,57.9,54.16,0.0133,0.91,"NA","NA","rain","Light rain until afternoon, starting again in the evening.",1010.23,NA,2015-08-10
+"305",NA,8.47,117,6.73,0.89,53.37,59.17,55.11,0.0075,0.88,"NA","NA","rain","Rain in the morning and afternoon.",1012.37,NA,2015-08-09
+"306",0.32,10,253,3.78,0.74,52.32,70.49,52.35,0,0.84,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon.",1011.55,NA,2015-08-08
+"307",0.24,10,259,1.72,0.73,53.05,71.98,56.05,0,0.81,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1010.75,NA,2015-08-07
+"308",0.37,10,298,1.12,0.77,51.62,70.9,52.12,4e-04,0.77,"NA","NA","partly-cloudy-day","Partly cloudy starting in the afternoon.",1009.93,NA,2015-08-06
+"309",NA,9.63,128,6.12,0.88,52.43,59.12,55.11,0.0025,0.74,"NA","NA","rain","Light rain in the morning.",1013.22,NA,2015-08-05
+"310",NA,10,131,7.57,0.71,51.69,66.19,57.2,0,0.7,"NA","NA","clear-day","Clear throughout the day.",1015.47,NA,2015-08-04
+"311",NA,10,177,1.24,0.68,51.07,76.55,54.75,0,0.66,"NA","NA","clear-day","Clear throughout the day.",1012.39,NA,2015-08-03
+"312",0.42,10,293,2.48,0.7,49.77,74.08,53.81,0,0.62,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon.",1014.59,NA,2015-08-02
+"313",NA,10,282,4.15,0.78,51.43,66.83,50.19,0,0.59,"NA","NA","clear-day","Clear throughout the day.",1016.37,NA,2015-08-01
+"314",NA,8.83,143,4.07,0.86,49.76,57.49,52.06,0.0013,0.55,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1019.7,NA,2015-07-31
+"315",NA,9,137,2.39,0.93,50.04,55.15,50.12,0.0071,0.52,"NA","NA","rain","Light rain in the morning and afternoon.",1016.5,NA,2015-07-30
+"316",NA,9.11,117,4.98,0.9,49.23,55.16,49.36,0.0158,0.47,"NA","NA","rain","Light rain in the morning and evening.",1019.73,NA,2015-07-29
+"317",NA,8.72,122,7.22,0.92,51.03,55.17,51.11,0.0183,0.44,"NA","NA","rain","Rain in the morning and afternoon.",1020.31,NA,2015-07-28
+"318",NA,8.38,132,8.39,0.91,51.86,55.11,52.1,0.0108,0.4,"NA","NA","rain","Rain in the morning and evening.",1014.77,NA,2015-07-27
+"319",NA,6.88,129,8.35,0.93,53.08,56.95,53.11,0.0221,0.37,"NA","NA","rain","Rain until evening.",1011.47,NA,2015-07-26
+"320",NA,8.39,128,5.11,0.89,51.7,58.01,52.18,0.0058,0.34,"NA","NA","rain","Light rain in the morning and evening.",1013.97,NA,2015-07-25
+"321",0.59,10,207,1.18,0.8,48.33,62.06,48.09,0,0.3,"NA","NA","clear-day","Clear throughout the day.",1012.51,NA,2015-07-24
+"322",0.47,8.98,160,2.14,0.79,49.11,64.03,51.1,0.005,0.27,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1007.84,NA,2015-07-23
+"323",NA,7.23,117,5.23,0.9,51.79,57.99,53.03,0.0754,0.24,"NA","NA","rain","Heavy rain until afternoon, starting again in the evening.",1004.48,NA,2015-07-22
+"324",NA,9.88,139,4.58,0.8,50.03,58.18,55.08,0,0.21,"NA","NA","clear-day","Clear throughout the day.",1010.08,NA,2015-07-21
+"325",0.37,10,142,3.72,0.74,46.46,63.5,48.16,0,0.18,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1009.71,NA,2015-07-20
+"326",0.66,9.2,286,3.68,0.85,50.75,64.03,51.03,0.0067,0.15,"NA","NA","rain","Light rain in the morning.",1011.24,NA,2015-07-19
+"327",NA,8.15,148,2,0.88,49.11,55.18,51.1,0.0213,0.12,"NA","NA","rain","Rain starting in the afternoon.",1018.76,NA,2015-07-18
+"328",NA,9.54,41,0.13,0.79,50.36,63.03,54.14,0.0038,0.09,"NA","NA","rain","Light rain in the morning.",1021.45,NA,2015-07-17
+"329",NA,5.35,131,6.76,0.94,53.45,58.88,52.1,0.0104,0.06,"NA","NA","rain","Light rain in the morning and afternoon.",1023.86,NA,2015-07-16
+"330",NA,9.41,125,5.18,0.85,48.68,56.18,51.23,8e-04,0.03,"NA","NA","clear-day","Clear throughout the day.",1022.41,NA,2015-07-15
+"331",NA,7.87,139,5.02,0.87,48.1,54.67,50.16,0.0196,0.99,"NA","NA","rain","Rain until afternoon.",1015.09,NA,2015-07-14
+"332",NA,8.52,125,5.09,0.91,50.62,55.27,52.1,0.0238,0.96,"NA","NA","rain","Rain in the morning and afternoon.",1013.21,NA,2015-07-13
+"333",NA,6.9,114,4.67,0.92,53.21,57.97,53.11,0.0604,0.93,"NA","NA","rain","Heavy rain in the morning and afternoon.",1013.81,NA,2015-07-12
+"334",NA,8.07,123,4.48,0.91,53.32,59.15,53.28,0.0204,0.89,"NA","NA","rain","Heavy rain in the afternoon and evening.",1009.49,NA,2015-07-11
+"335",NA,9.59,133,5.75,0.91,52.14,57.2,52.19,0.0158,0.86,"NA","NA","rain","Rain in the morning and overnight.",1006.51,NA,2015-07-10
+"336",NA,9.2,126,3.75,0.9,51.84,58.93,52.23,0.0142,0.82,"NA","NA","rain","Rain until afternoon, starting again in the evening.",1005.98,NA,2015-07-09
+"337",NA,9.05,133,3.87,0.86,53.1,63.03,54.15,0.0058,0.79,"NA","NA","clear-day","Clear throughout the day.",1009.59,NA,2015-07-08
+"338",NA,7.57,197,1.34,0.91,54.68,59.91,55.07,0.0213,0.75,"NA","NA","rain","Rain starting in the afternoon.",1013.36,NA,2015-07-07
+"339",0.63,10,301,4.67,0.63,52.57,74.81,57.88,0,0.71,"NA","NA","clear-day","Clear throughout the day.",1017.57,NA,2015-07-06
+"340",0.31,10,287,6.76,0.57,50.61,82.83,56.75,0,0.67,"NA","NA","partly-cloudy-day","Partly cloudy until evening.",1018.15,NA,2015-07-05
+"341",0.32,9.96,283,4.97,0.66,50.36,75.85,51.1,0,0.63,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1020.22,NA,2015-07-04
+"342",0.35,10,206,1.3,0.73,46.01,63.5,47.89,0,0.6,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon.",1024.01,NA,2015-07-03
+"343",NA,8.62,121,2.84,0.88,48.53,54.19,50.1,0.0038,0.56,"NA","NA","rain","Light rain in the morning.",1024.37,NA,2015-07-02
+"344",NA,7.85,122,10.62,0.86,50.06,56.06,52.16,0.0142,0.53,"NA","NA","rain","Light rain until evening.",1018.42,NA,2015-07-01
+"345",0.59,9.38,146,1.55,0.74,47.53,62.06,49.88,0.0117,0.48,"NA","NA","rain","Rain starting in the evening.",1021.66,NA,2015-06-30
+"346",NA,10,261,2.58,0.69,46.81,63.98,51.17,0,0.45,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1023.77,NA,2015-06-29
+"347",NA,7.17,272,1.78,0.89,53.44,61.09,53.2,0.0379,0.42,"NA","NA","rain","Rain until afternoon.",1016.98,NA,2015-06-28
+"348",NA,10,146,2.19,0.79,50.7,65.89,52.1,8e-04,0.39,"NA","NA","rain","Rain in the morning and overnight.",1018.69,NA,2015-06-27
+"349",NA,8.4,124,2.64,0.9,50.92,57.2,49.17,0.0017,0.35,"NA","NA","rain","Light rain starting in the evening.",1020.11,NA,2015-06-26
+"350",NA,6.41,108,7.64,0.91,52.58,59,53.09,0.025,0.32,"NA","NA","rain","Rain in the morning and afternoon.",1020.38,NA,2015-06-25
+"351",NA,9.17,136,5.21,0.82,53.03,64.15,55.09,0.0063,0.29,"NA","NA","rain","Rain starting in the evening.",1012.57,NA,2015-06-24
+"352",0.49,10,142,4.38,0.66,47.97,68.18,52.85,0,0.26,"NA","NA","partly-cloudy-day","Partly cloudy in the morning.",1013.94,NA,2015-06-23
+"353",0.39,10,225,1.32,0.64,50.14,73.99,50.84,0,0.23,"NA","NA","partly-cloudy-night","Partly cloudy starting in the evening.",1016.19,NA,2015-06-22
+"354",0.37,10,246,2.87,0.68,49.5,69.5,49.84,0,0.2,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon.",1015.87,NA,2015-06-21
+"355",0.35,10,266,5.46,0.62,47.23,66.99,55.1,0,0.17,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1017.12,NA,2015-06-20
+"356",NA,10,139,5.26,0.66,45.64,61.21,54.11,0,0.14,"NA","NA","clear-day","Clear throughout the day.",1020,NA,2015-06-19
+"357",NA,10,247,0.69,0.72,48.61,66.06,52.14,0,0.11,"NA","NA","clear-day","Clear throughout the day.",1017.2,NA,2015-06-18
+"358",NA,9.75,160,2.38,0.86,49.81,57.05,52.07,0.0033,0.08,"NA","NA","rain","Light rain in the morning.",1013.33,NA,2015-06-17
+"359",NA,9,137,6.58,0.81,48.28,57.03,52.08,0,0.05,"NA","NA","clear-day","Clear throughout the day.",1017.59,NA,2015-06-16
+"360",0.38,10,144,8.53,0.61,46.32,64.34,54.83,0,0.02,"NA","NA","partly-cloudy-day","Partly cloudy throughout the day.",1015.29,NA,2015-06-15
+"361",0.53,10,345,1.71,0.51,47.69,78.07,57.93,0,0.98,"NA","NA","partly-cloudy-day","Partly cloudy until afternoon and dry throughout the day.",1016.81,NA,2015-06-14
+"362",0.36,10,329,4.04,0.51,45.42,78.01,53.86,0,0.94,"NA","NA","partly-cloudy-day","Dry throughout the day and partly cloudy starting in the afternoon.",1022.06,NA,2015-06-13
+"363",NA,10,307,3.13,0.78,47.61,61.94,45,0,0.91,"NA","NA","partly-cloudy-night","Partly cloudy overnight.",1024.41,NA,2015-06-12
+"364",NA,10,133,2.26,0.79,43.16,52.29,47.06,0,0.87,"NA","NA","clear-day","Clear throughout the day.",1025.77,NA,2015-06-11
+"365",NA,9.33,121,3.58,0.84,43.5,51.34,46.09,0.0179,0.83,"NA","NA","rain","Rain in the morning.",1015.19,NA,2015-06-10
+"366",NA,7.38,130,3.41,0.88,44.89,51.97,46.03,0.02,0.8,"NA","NA","rain","Rain in the morning and afternoon.",1013.69,NA,2015-06-09
+"367",NA,10,156,2.32,0.67,39.26,56.16,44.05,0,0.76,"NA","NA","rain","Light rain overnight.",1021.87,NA,2015-06-08
