@@ -3,6 +3,103 @@
 library('RCurl')
 library('rjson')
 
+getWeatherDataFromJSONFuture <- function(weatherJSON) {
+  JSONList <- fromJSON(weatherJSON)
+  weatherDataFrame = NULL
+  
+  currentIcon = NA
+  weatherSummary = NA
+  weatherIcon = NA
+  weatherSunrise = NA
+  weatherSunset = NA
+  weatherMoonPhase = NA
+  weatherPrecip = NA
+  weatherTempMin = NA
+  weatherTempMax = NA
+  weatherDewPoint = NA
+  weatherHumidity = NA
+  weatherWindSpeed = NA
+  weatherWindBearing = NA
+  weatherVisibillity = NA
+  weatherCloudCover = NA
+  weatherPressure= NA
+  weatherOzone = NA
+  for(i in 2:8){
+    if(!is.null(JSONList$daily$data[[i]]$time)){
+      weatherDate = JSONList$daily$data[[i]]$time
+      weatherDate = toString(as.POSIXct(as.numeric(toString(weatherDate)), origin = "19700101", format="%m/%d/%Y"))
+      
+    }
+    if(!is.null(JSONList$daily$data[[i]]$summary)){
+      weatherSummary = JSONList$daily$data[[i]]$summary
+    }
+    if(!is.null(JSONList$daily$data[[i]]$summary)){
+      weatherSummary = JSONList$daily$data[[i]]$summary
+    } 
+    if(!is.null(JSONList$current$icon)){
+      currentIcon = JSONList$current$icon
+    }
+    if(!is.null(JSONList$daily$data[[i]]$sunriseTime)){
+      weatherSunrise = JSONList$daily$data[[i]]$sunriseTime
+      weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "19700101", format="%m/%d/%Y"))
+    }
+    if(!is.null(JSONList$daily$data[[i]]$sunsetTime)){
+      weatherSunset = JSONList$daily$data[[i]]$sunsetTime
+      weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "19700101", format="%m/%d/%Y"))
+      
+    }
+    if(!is.null(JSONList$daily$data[[i]]$moonPhase)){
+      weatherMoonPhase = JSONList$daily$data[[i]]$moonPhase
+    }
+    if(!is.null(JSONList$daily$data[[i]]$precipIntensity)){
+      weatherPrecip = JSONList$daily$data[[i]]$precipIntensity
+    }
+    if(!is.null(JSONList$daily$data[[i]]$temperatureMin)){
+      weatherTempMin = JSONList$daily$data[[i]]$temperatureMin
+    }
+    if(!is.null(JSONList$daily$data[[i]]$temperatureMax)){
+      weatherTempMax = JSONList$daily$data[[i]]$temperatureMax
+    }
+    if(!is.null(JSONList$daily$data[[i]]$dewPoint)){
+      weatherDewPoint = JSONList$daily$data[[i]]$dewPoint
+    }
+    if(!is.null(JSONList$daily$data[[i]]$humidity)){
+      weatherHumidity = JSONList$daily$data[[i]]$humidity
+    }
+    if(!is.null(JSONList$daily$data[[i]]$windSpeed)){
+      weatherWindSpeed = JSONList$daily$data[[i]]$windSpeed
+    }
+    if(!is.null(JSONList$daily$data[[i]]$windBearing)){
+      weatherWindBearing = JSONList$daily$data[[i]]$windBearing
+    }
+    if(!is.null(JSONList$daily$data[[i]]$visibility)){
+      weatherVisibillity = JSONList$daily$data[[i]]$visibility
+    }
+    if(!is.null(JSONList$daily$data[[i]]$cloudCover)){
+      weatherCloudCover = JSONList$daily$data[[i]]$cloudCover
+    }
+    if(!is.null(JSONList$daily$data[[i]]$pressure)){
+      weatherPressure = JSONList$daily$data[[i]]$pressure
+    }
+    if(!is.null(JSONList$daily$data[[i]]$ozone)){
+      weatherOzone = JSONList$daily$data[[i]]$ozone
+    }
+    
+    weatherDF = cbind.data.frame(currentIcon, weatherDate, weatherCloudCover,weatherVisibillity,weatherWindBearing,
+                                 weatherWindSpeed,weatherHumidity,weatherDewPoint,weatherTempMax,
+                                 weatherTempMin,weatherPrecip,weatherMoonPhase,weatherSunset,
+                                 weatherSunrise,weatherIcon,weatherSummary, weatherPressure, weatherOzone)
+    
+    colnames(weatherDF) = col.names = c('currentIcon','weatherDate','weatherCloudCover','weatherVisibillity','weatherWindBearing',
+                                        'weatherWindSpeed','weatherHumidity','weatherDewPoint','weatherTempMax',
+                                        'weatherTempMin','weatherPrecip','weatherMoonPhase','weatherSunset',
+                                        'weatherSunrise','weatherIcon','weatherSummary','weatherPressure','weatherOzone')
+    
+    weatherDataFrame = rbind(weatherDataFrame, weatherDF)
+  }
+  
+  return(weatherDataFrame)
+}
 
 getWeatherDataFromJSON <- function(weatherJSON) {
   JSONList <- fromJSON(weatherJSON)

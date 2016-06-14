@@ -115,9 +115,46 @@ shinyServer(function(input, output, session) {
     else{}
   })
   
+
+    output$stateTempPlot = renderPlot({
+      stateData = read.csv(paste("Capitals/",input$statesTemp, ".csv", sep = ""))
+      
+      stateData$weatherDate = as.Date(stateData$weatherDate)
+      
+      stateData$weatherMonth = months(stateData$weatherDate)
+      
+      stateData$weatherMonth = factor(stateData$weatherMonth, levels = month.name)
+      
+      maxAvg = aggregate(stateData$weatherTempMax,list(stateData$weatherMonth), mean)
+      
+      names(maxAvg) = c("Month", "Temperature")
+      
+      minAvg = aggregate(stateData$weatherTempMin,list(stateData$weatherMonth), mean)
+      
+      names(minAvg) = c("Month", "Temperature")
+      
+      
+      
+      temp = cbind.data.frame(minAvg, maxAvg[,2])
+      names(temp) = c("Month", "Minimum","Maximum")
+      
+      library(reshape2)
+      library(ggplot2)
+      temp <- melt(temp, id.vars="Month")
+      names(temp) = c("Month","TemperatureType","Temperature")
+      temp$TemperatureType = factor(temp$TemperatureType, levels = rev(levels(temp$TemperatureType)))
+      
+      ggplot(data = temp, aes(x = Month,y = Temperature, color = TemperatureType, group = TemperatureType)) + 
+        geom_point(size = 2) +
+        geom_line(size = 1.5) +
+        scale_color_manual(values = c("red", "blue")) +
+        ggtitle(paste(input$statesTemp, "Yearly Weather")) + 
+        ylim(c(0,100)) +
+        theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
+    })
     
    
-  plotType = eventReactive(input$plotChoice, {
+  stateTemperature = eventReactive(input$plotChoice, {
     
     validate(
       need(weatherValues$weather, '')
@@ -193,6 +230,8 @@ shinyServer(function(input, output, session) {
     
     
   })
+  
+  
   
   output$temperaturePlot = renderPlot({
     plotType()
