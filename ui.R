@@ -92,16 +92,16 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                                   choices = list("Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
                                                                  "Little Rock, Arkansas" = "Arkansas",  "Sacramento, California" = "California",  "Denver, Colorado" = "Colorado",
                                                                  "Hartford, Connecticut" = "Connecticut",  "Dover, Delaware" = "Delaware",  "Tallahassee, Florida" = "Florida", 
-                                                                 "Atlanta, Georgia" = "Georgia",  "Honolulu, Hawaii" = "Hawaii",  "Boise, Idaho" = "Idaho",  "Springfield, Illinois" = "Illisnois",
+                                                                 "Atlanta, Georgia" = "Georgia",  "Honolulu, Hawaii" = "Hawaii",  "Boise, Idaho" = "Idaho",  "Springfield, Illinois" = "Illinois",
                                                                  "Indianapolis, Indiana" = "Indiana",  "Des Moines, Iowa" = "Iowa",  "Topeka, Kansas" = "Kansas",  "Frankfort, Kentucky" = "Kentucky",
                                                                  "Baton Rouge, Louisiana" = "Louisiana",  "Augusta, Maine" = "Maine",  "Annapolis, Maryland" = "Maryland",  "Boston, Massachusetts" = "Massachusetts",
                                                                  "Lansing, Michigan" = "Michigan",  "St. Paul, Minnesota" = "Minnesota",  "Jackson, Mississippi" = "Mississippi",  "Jefferson City, Missouri" = "Missouri", 
-                                                                 "Helena, Montana" = "Montana",  "Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "NewHampshire",
-                                                                 "Trenton, New Jersey" = "NewJersey",  "Santa Fe, New Mexico" ="NewMexico",  "Albany, New York" = "NewYork",  "Raleigh, North Carolina" = "NorthCarolina",
-                                                                 "Bismarck, North Dakota" = "NorthDakota",  "Columbus, Ohio" = "Ohio",  "Oklahoma City, Oklahoma" = "Oklahoma",  "Salem, Oregon" = "Oregon",  "Harrisburg, Pennsylvania" = "Pennsylvania",
-                                                                 "Providence, Rhode Island" = "RhodeIsland",  "Columbia, South Carolina" = "SouthCarolina",  "Pierre, South Dakota" = "SouthDakota",  "Nashville, Tennessee" = "Tennessee",
+                                                                 "Helena, Montana" = "Montana",  "Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "New Hampshire",
+                                                                 "Trenton, New Jersey" = "New Jersey",  "Santa Fe, New Mexico" ="New Mexico",  "Albany, New York" = "New York",  "Raleigh, North Carolina" = "North Carolina",
+                                                                 "Bismarck, North Dakota" = "North Dakota",  "Columbus, Ohio" = "Ohio",  "Oklahoma City, Oklahoma" = "Oklahoma",  "Salem, Oregon" = "Oregon",  "Harrisburg, Pennsylvania" = "Pennsylvania",
+                                                                 "Providence, Rhode Island" = "Rhode Island",  "Columbia, South Carolina" = "South Carolina",  "Pierre, South Dakota" = "South Dakota",  "Nashville, Tennessee" = "Tennessee",
                                                                  "Austin, Texas" = "Texas",  "Salt Lake City, Utah" = "Utah",  "Montpelier, Vermont" = "Vermont",  "Richmond, Virginia" = "Virgina",  "Olympia, Washington" = "Washington",
-                                                                 "Charleston, West Virginia" = "WestVirginia",  "Madison, Wisconsin" = "Wisconsin",  "Cheyenne, Wyoming" = "Wyoming"
+                                                                 "Charleston, West Virginia" = "West Virginia",  "Madison, Wisconsin" = "Wisconsin",  "Cheyenne, Wyoming" = "Wyoming"
                                                                  
                                                   ),selected = "Minnesota", width = "800px")  
                               ),

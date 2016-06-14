@@ -2,6 +2,8 @@
 library(shiny)
 library(leaflet)
 library(ggmap)
+library(reshape2)
+library(ggplot2)
 library(DT)
 source('helper.R')
 
@@ -130,16 +132,10 @@ shinyServer(function(input, output, session) {
       names(maxAvg) = c("Month", "Temperature")
       
       minAvg = aggregate(stateData$weatherTempMin,list(stateData$weatherMonth), mean)
-      
       names(minAvg) = c("Month", "Temperature")
-      
-      
-      
       temp = cbind.data.frame(minAvg, maxAvg[,2])
       names(temp) = c("Month", "Minimum","Maximum")
       
-      library(reshape2)
-      library(ggplot2)
       temp <- melt(temp, id.vars="Month")
       names(temp) = c("Month","TemperatureType","Temperature")
       temp$TemperatureType = factor(temp$TemperatureType, levels = rev(levels(temp$TemperatureType)))
@@ -148,20 +144,20 @@ shinyServer(function(input, output, session) {
         geom_point(size = 2) +
         geom_line(size = 1.5) +
         scale_color_manual(values = c("red", "blue")) +
-        ggtitle(paste(input$statesTemp, "Yearly Weather")) + 
-        ylim(c(0,100)) +
+        #ggtitle(paste(input$statesTemp, "Yearly Weather")) + 
+        ylim(c(0,110)) +
         theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
     })
     
    
-  stateTemperature = eventReactive(input$plotChoice, {
-    
-    validate(
-      need(weatherValues$weather, '')
-    )    
-    weatherData = weatherValues$weather
-
-
+    plotType = eventReactive(input$plotChoice, {
+      
+      validate(
+        need(weatherValues$weather, '')
+      )    
+      weatherData = weatherValues$weather
+      
+      
       output$windPlot = renderPlot({
         validate(
           need("wind" %in% input$plotChoice, 'Select Wind speed as a varaible!')
@@ -173,8 +169,8 @@ shinyServer(function(input, output, session) {
           labs(x = "\nDate", y = "Wind Speed\n",title =paste("Wind Speed for the",input$timeSelect,"Days")) +
           TemperatureTheme + scale_color_discrete(name = "Wind Speed")
       })
-    
-    
+      
+      
       output$humidPlot = renderPlot({
         validate(
           need("humid" %in% input$plotChoice, 'Select humidity as a varaible!')
@@ -186,8 +182,8 @@ shinyServer(function(input, output, session) {
           labs(x = "\nDate", y = "Humidity\n",title = paste("Humidity for the",input$timeSelect, "Days")) +
           TemperatureTheme + scale_color_discrete(name = "Humidity")
       })
-    
-    
+      
+      
       output$precipPlot = renderPlot({
         validate(
           need("precip" %in% input$plotChoice, 'Select precipitation as a varaible!')
@@ -199,9 +195,9 @@ shinyServer(function(input, output, session) {
           labs(x = "\nDate", y = "Precipitation\n",title = paste("Precipitation for the",input$timeSelect,"Days")) +
           TemperatureTheme + scale_color_discrete(name = "Precipitation")
       })
-    
-    
-       
+      
+      
+      
       output$temperaturePlot = renderPlot({
         validate(
           need("temp" %in% input$plotChoice, 'Select temperature as a varaible!')
@@ -211,25 +207,25 @@ shinyServer(function(input, output, session) {
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherTempMax, colour = "Maximum")) +
           geom_line(aes(y = weatherTempMin, colour = "Minimum")) +
-          labs(x = "\nDate", y = "Temperature\n",title = paste("Temperature for the",input$timeSelect, "Days")) +
+         # labs(x = "\nDate", y = "Temperature\n",title = paste("Temperature for the",input$timeSelect, "Days")) +
           TemperatureTheme + scale_color_discrete(name = "Temperature")
       })
-    
-   
-    output$ozonePlot = renderPlot({
-      validate(
-        need("ozone" %in% input$plotChoice, 'Select Ozone Levels as a varaible!')
-      )  
-      weatherData = weatherValues$weather
       
+      
+      output$ozonePlot = renderPlot({
+        validate(
+          need("ozone" %in% input$plotChoice, 'Select Ozone Levels as a varaible!')
+        )  
+        weatherData = weatherValues$weather
+        
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherOzone, colour = "Ozone")) +
           labs(x = "\nDate", y = "Ozone\n",title = paste("Ozone levels for the",input$timeSelect,"Days")) +
           TemperatureTheme + scale_color_discrete(name = "Ozone")
       })
-    
-    
-  })
+      
+      
+    })
   
   
   

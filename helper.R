@@ -8,6 +8,7 @@ getWeatherDataFromJSONFuture <- function(weatherJSON) {
   weatherDataFrame = NULL
   
   currentIcon = NA
+  weatherDate = NA
   weatherSummary = NA
   weatherIcon = NA
   weatherSunrise = NA
@@ -27,7 +28,7 @@ getWeatherDataFromJSONFuture <- function(weatherJSON) {
   for(i in 2:8){
     if(!is.null(JSONList$daily$data[[i]]$time)){
       weatherDate = JSONList$daily$data[[i]]$time
-      weatherDate = toString(as.POSIXct(as.numeric(toString(weatherDate)), origin = "19700101", format="%m/%d/%Y"))
+      weatherDate = toString(as.POSIXct(as.numeric(toString(weatherDate)), origin = "1970-01-01"))
       
     }
     if(!is.null(JSONList$daily$data[[i]]$summary)){
@@ -41,11 +42,11 @@ getWeatherDataFromJSONFuture <- function(weatherJSON) {
     }
     if(!is.null(JSONList$daily$data[[i]]$sunriseTime)){
       weatherSunrise = JSONList$daily$data[[i]]$sunriseTime
-      weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "19700101", format="%m/%d/%Y"))
+      weatherSunrise = toString(as.POSIXct(as.numeric(toString(weatherSunrise)), origin = "1970-01-01"))
     }
     if(!is.null(JSONList$daily$data[[i]]$sunsetTime)){
       weatherSunset = JSONList$daily$data[[i]]$sunsetTime
-      weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "19700101", format="%m/%d/%Y"))
+      weatherSunset = toString(as.POSIXct(as.numeric(toString(weatherSunset)), origin = "1970-01-01"))
       
     }
     if(!is.null(JSONList$daily$data[[i]]$moonPhase)){
