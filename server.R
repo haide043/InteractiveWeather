@@ -152,7 +152,7 @@ shinyServer(function(input, output, session) {
     output$stateTempPlot = renderPlot({
       input$statesTemp #this is forcing the plot to wait until the inputs have been completed.
       input$statesTemp2
-      if(bump){
+      if(radioSwitch){
       name = input$statesTemp
       stateData = read.csv(paste("Capitals/",name, ".csv", sep = ""))
       }
