@@ -3,6 +3,7 @@
 library('RCurl')
 library('rjson')
 
+
 getWeatherDataFromJSONFuture <- function(weatherJSON) {
   JSONList <- fromJSON(weatherJSON)
   weatherDataFrame = NULL

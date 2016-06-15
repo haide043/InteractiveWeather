@@ -13,6 +13,8 @@ shinyServer(function(input, output, session) {
       addProviderTiles("MapQuestOpen.OSM", options = providerTileOptions(noWrap = T, minZoom = 3))
   })
   
+  
+  
   weatherValues = reactiveValues(weather = NULL)
   
   
@@ -117,9 +119,47 @@ shinyServer(function(input, output, session) {
     else{}
   })
   
+ observeEvent(input$statesTemp,{
+   bump <<- TRUE
+   updateRadioButtons(session, "statesTemp2", 
+                      choices = list(
+                        "Helena, Montana" = "Montana","Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "New Hampshire",
+                        "Trenton, New Jersey" = "New Jersey",  "Santa Fe, New Mexico" ="New Mexico",  "Albany, New York" = "New York",  "Raleigh, North Carolina" = "North Carolina",
+                        "Bismarck, North Dakota" = "North Dakota",  "Columbus, Ohio" = "Ohio",  "Oklahoma City, Oklahoma" = "Oklahoma",  "Salem, Oregon" = "Oregon",  "Harrisburg, Pennsylvania" = "Pennsylvania",
+                        "Providence, Rhode Island" = "Rhode Island",  "Columbia, South Carolina" = "South Carolina",  "Pierre, South Dakota" = "South Dakota",  "Nashville, Tennessee" = "Tennessee",
+                        "Austin, Texas" = "Texas",  "Salt Lake City, Utah" = "Utah",  "Montpelier, Vermont" = "Vermont",  "Richmond, Virginia" = "Virgina",  "Olympia, Washington" = "Washington",
+                        "Charleston, West Virginia" = "West Virginia",  "Madison, Wisconsin" = "Wisconsin",  "Cheyenne, Wyoming" = "Wyoming"
+                      ),
+                      selected = character(0))
+   }) 
+ 
+ observeEvent(input$statesTemp2,{
+   bump <<- FALSE
+   updateRadioButtons(session, "statesTemp", 
+                      choices = list(
+                        "Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
+                        "Little Rock, Arkansas" = "Arkansas",  "Sacramento, California" = "California",  "Denver, Colorado" = "Colorado",
+                        "Hartford, Connecticut" = "Connecticut",  "Dover, Delaware" = "Delaware",  "Tallahassee, Florida" = "Florida", 
+                        "Atlanta, Georgia" = "Georgia",  "Honolulu, Hawaii" = "Hawaii",  "Boise, Idaho" = "Idaho",  "Springfield, Illinois" = "Illinois",
+                        "Indianapolis, Indiana" = "Indiana",  "Des Moines, Iowa" = "Iowa",  "Topeka, Kansas" = "Kansas",  "Frankfort, Kentucky" = "Kentucky",
+                        "Baton Rouge, Louisiana" = "Louisiana",  "Augusta, Maine" = "Maine",  "Annapolis, Maryland" = "Maryland",  "Boston, Massachusetts" = "Massachusetts",
+                        "Lansing, Michigan" = "Michigan",  "St. Paul, Minnesota" = "Minnesota",  "Jackson, Mississippi" = "Mississippi",  "Jefferson City, Missouri" = "Missouri"
+                      ),
+                      selected = character(0))
 
+ }) 
+ 
     output$stateTempPlot = renderPlot({
-      stateData = read.csv(paste("Capitals/",input$statesTemp, ".csv", sep = ""))
+      input$statesTemp #this is forcing the plot to wait until the inputs have been completed.
+      input$statesTemp2
+      if(bump){
+      name = input$statesTemp
+      stateData = read.csv(paste("Capitals/",name, ".csv", sep = ""))
+      }
+      else{
+        name = input$statesTemp2
+        stateData = read.csv(paste("Capitals/",name, ".csv", sep = ""))
+      }
       
       stateData$weatherDate = as.Date(stateData$weatherDate)
       
@@ -144,7 +184,7 @@ shinyServer(function(input, output, session) {
         geom_point(size = 2) +
         geom_line(size = 1.5) +
         scale_color_manual(values = c("red", "blue")) +
-        #ggtitle(paste(input$statesTemp, "Yearly Weather")) + 
+        ggtitle(paste(name, "Yearly Weather")) + 
         ylim(c(0,110)) +
         theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
     })
@@ -251,7 +291,7 @@ shinyServer(function(input, output, session) {
                                  columnDefs = list(list(width= "100px", targets = c(0,1)))))
   })
   
-  
+
   })
 
 
