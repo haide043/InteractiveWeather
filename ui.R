@@ -112,7 +112,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                               ),selected = character(0), width = "800px"
                             )),
                             column(4,
-                                   plotOutput("stateTempPlot", width = "100%")
+                                   plotOutput("stateTempPlot", width = "100%", height = "150%")
                             ))
                                                          
                             )))
