@@ -120,7 +120,7 @@ shinyServer(function(input, output, session) {
   })
   
  observeEvent(input$statesTemp,{
-   bump <<- TRUE
+   radioSwitch <<- TRUE
    updateRadioButtons(session, "statesTemp2", 
                       choices = list(
                         "Helena, Montana" = "Montana","Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "New Hampshire",
@@ -134,7 +134,7 @@ shinyServer(function(input, output, session) {
    }) 
  
  observeEvent(input$statesTemp2,{
-   bump <<- FALSE
+   radioSwitch <<- FALSE
    updateRadioButtons(session, "statesTemp", 
                       choices = list(
                         "Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
