@@ -87,7 +87,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                               column(12,
                                      titlePanel(h1(strong("Pick a Capital based on Weather"), align = "center")))),
                             fluidRow(
-                              column(6,style = "background-color:#D3D3D3; color:#000000;",
+                              column(4,style = "background-color:#D3D3D3; color:#000000;",
                                      radioButtons("statesTemp", label = h3(""), 
                                                   choices = list("Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
                                                                  "Little Rock, Arkansas" = "Arkansas",  "Sacramento, California" = "California",  "Denver, Colorado" = "Colorado",
@@ -100,7 +100,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                                                  
                                                   ),selected = "Minnesota", width = "800px")
                               ),
-                              column(6, style = "background-color:#D3D3D3; color:#000000;",
+                              column(4, style = "background-color:#D3D3D3; color:#000000;",
                                      radioButtons("statesTemp2", label = h3(""), 
                                                   choices = list(
                                       "Helena, Montana" = "Montana","Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "New Hampshire",
@@ -110,11 +110,10 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                      "Austin, Texas" = "Texas",  "Salt Lake City, Utah" = "Utah",  "Montpelier, Vermont" = "Vermont",  "Richmond, Virginia" = "Virgina",  "Olympia, Washington" = "Washington",
                                      "Charleston, West Virginia" = "West Virginia",  "Madison, Wisconsin" = "Wisconsin",  "Cheyenne, Wyoming" = "Wyoming"
                               ),selected = character(0), width = "800px"
-                            ))),
-                            fluidRow(
-                              plotOutput("stateTempPlot", width = "100%")
-                            )
-                        
+                            )),
+                            column(4,
+                                   plotOutput("stateTempPlot", width = "100%")
+                            ))
                                                          
                             )))
 
