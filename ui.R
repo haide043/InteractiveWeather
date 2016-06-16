@@ -115,7 +115,8 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                               ),selected = character(0), width = "800px"
                             )),
                             column(4,
-                                   plotOutput("stateTempPlot", width = "100%")
+                                   plotOutput("stateTempPlot", width = "100%"),
+                                   plotOutput("stateHumidPlot", width = "100%")
                             ))),
                             tabPanel("Compare States",
                                      fluidRow(
@@ -145,7 +146,8 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                              
                                        column(8,
                                               plotOutput("compareMax", width = "100%"),
-                                              plotOutput("compareMin", width = "100%")
+                                              plotOutput("compareMin", width = "100%"),
+                                              plotOutput("compareHumidPlot", width = "100%")
                                        ))
                             )))
                                                          

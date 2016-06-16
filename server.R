@@ -162,7 +162,6 @@ shinyServer(function(input, output, session) {
         location = paste("Capitals/",name, ".csv", sep = "")
       }
       
-      print(location)
       state = stateClean(location)
       
       
@@ -175,6 +174,30 @@ shinyServer(function(input, output, session) {
         theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
     })
 
+##################################################################################################
+ 
+ output$stateHumidPlot = renderPlot({
+   input$statesTemp #this is forcing the plot to wait until the inputs have been completed.
+   input$statesTemp2
+   if(radioSwitch){
+     name = input$statesTemp
+     location = paste("Capitals/",name, ".csv", sep = "")
+   }
+   else{
+     name = input$statesTemp2
+     location = paste("Capitals/",name, ".csv", sep = "")
+   }
+   
+   state = stateHumidClean(location)
+   
+   
+   ggplot(data = state, aes(x = Month,y = Humidity,  group = 1)) + 
+     geom_point(size = 2, color = "orange") +
+     geom_line(size = 1.5, color = "orange") +
+     ggtitle(paste(name, "Yearly Humidity")) + 
+     ylim(c(0,1)) +
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
+ })
  
 #####################################Compare States###################################################
  
@@ -241,6 +264,30 @@ shinyServer(function(input, output, session) {
    
  })
  
+ 
+ output$compareHumidPlot = renderPlot({
+   input$compareTemps
+   statesToCompare = input$compareTemps
+   validate(need(statesToCompare >0, ''))
+   location = paste("Capitals/",statesToCompare[1],".csv",sep = "")
+   stateFrame = stateHumidClean(location)
+   if(length(statesToCompare)>1){
+     for(i in 2:length(statesToCompare)){
+       location = paste("Capitals/",statesToCompare[i],".csv",sep = "")
+       state = stateHumidClean(location)
+       stateFrame = merge(stateFrame, state, by = c("Month"))
+     }}
+   names(stateFrame) = c("Month",statesToCompare)
+   stateFrame = melt(stateFrame, id.vars = c("Month"))
+   names(stateFrame) = c("Month","State","Humidity")
+   
+   ggplot(data = stateFrame, aes(x = Month, y = Humidity, color = State, group = State)) +
+     geom_line(size = 1.5) +
+     ggtitle(paste("Minimum Temperature Comparison")) + 
+     ylim(c(0,1)) +
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
+   
+ })
  
  
 ######################################################################################################    
