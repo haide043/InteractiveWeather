@@ -10,7 +10,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Interactive Weather",
                               column(8, offset = 2,
                                      titlePanel(h1(strong("World Wide Weather"), align = "center")),
                                      h2("Created by Humza Haider", align = "center"),
-                                     br(),
+                                     hr(),
                                      br(),
                                      h3("Click one of the tabs to explore different types of weather analysis.",em("World Weather Report"), "will supply a map of the world. On this map you
                                         will be able to click anywhere in the world to get forecast information for the next 7 days as well as historical information for 7 to 30 days in the past."),
@@ -34,7 +34,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Interactive Weather",
                         
                               h3("Choose the variables you would like to be displayed. In addition to clicking a location on the map you are able to search for a specific location using the text box.")),
                               column(2)),
-                            br(),
+                            hr(),
                             fluidRow(
                               column(2, 
                                      selectInput("timeSelect", label = h3("Select a duration of time"),
@@ -86,7 +86,8 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Interactive Weather",
                               tabPanel("View Individual States",
                             fluidRow(
                               column(12,
-                                     titlePanel(h1(strong("Choose a Capital to see Average Yearly Weather"), align = "center")))),
+                                     titlePanel(h1(strong("Individual States"), align = "center")),
+                                     h3("This tab lets you examine individual states maximum temperatures, minimum temperatures, and humidity levels. On the next tab you will be able to compare multiple states average temperatures and humidity levels."))),
                             hr(),
                             fluidRow(
                               column(4,style = "background-color:#D3D3D3; color:#000000;",
@@ -120,7 +121,8 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Interactive Weather",
                             tabPanel("Compare States",
                                      fluidRow(
                                        column(12,
-                                              titlePanel(h1(strong("Choose a Capital to see Average Yearly Weather"), align = "center")))),
+                                              titlePanel(h1(strong("Compare States"), align = "center"))
+                                              )),
                                      hr(),
                                      fluidRow(
                                        column(4,style = "background-color:#D3D3D3; color:#000000;",
