@@ -320,5 +320,27 @@ iconDataTable = data.frame(Meaning = c('Rain','Cloudy','Partly Cloudy','Windy', 
                                     '<img src = "http://media.nbcbayarea.com/designimages/new_wx_99.png" height = "30" width = "30"></img>'))
 
 
+#####
 
+stateClean = function(loc){
+  stateData = read.csv(loc)
+  
+  stateData$weatherDate = as.Date(stateData$weatherDate)
+  stateData$weatherMonth = months(stateData$weatherDate)
+  stateData$weatherMonth = factor(stateData$weatherMonth, levels = month.name)
+  
+  maxAvg = aggregate(stateData$weatherTempMax,list(stateData$weatherMonth), mean)
+  names(maxAvg) = c("Month", "Temperature")
+  
+  minAvg = aggregate(stateData$weatherTempMin,list(stateData$weatherMonth), mean)
+  names(minAvg) = c("Month", "Temperature")
+  temp = cbind.data.frame(minAvg, maxAvg[,2])
+  names(temp) = c("Month", "Minimum","Maximum")
+  
+  temp <- melt(temp, id.vars="Month")
+  names(temp) = c("Month","TemperatureType","Temperature")
+  temp$TemperatureType = factor(temp$TemperatureType, levels = rev(levels(temp$TemperatureType)))
+  
+  return(temp)
+}
 

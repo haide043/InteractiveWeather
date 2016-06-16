@@ -124,7 +124,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                      hr(),
                                      fluidRow(
                                        column(4,style = "background-color:#D3D3D3; color:#000000;",
-                                              checkboxGroupInput("statesTemp3", label = h3(""), 
+                                              checkboxGroupInput("compareTemps", label = h3(""), 
                                                            choices = list("Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
                                                                           "Little Rock, Arkansas" = "Arkansas",  "Sacramento, California" = "California",  "Denver, Colorado" = "Colorado",
                                                                           "Hartford, Connecticut" = "Connecticut",  "Dover, Delaware" = "Delaware",  "Tallahassee, Florida" = "Florida", 
@@ -144,7 +144,8 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                               
                                              
                                        column(8,
-                                              plotOutput("compareStates", width = "100%")
+                                              plotOutput("compareMax", width = "100%"),
+                                              plotOutput("compareMin", width = "100%")
                                        ))
                             )))
                                                          

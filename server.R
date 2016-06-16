@@ -155,33 +155,18 @@ shinyServer(function(input, output, session) {
       input$statesTemp2
       if(radioSwitch){
       name = input$statesTemp
-      stateData = read.csv(paste("Capitals/",name, ".csv", sep = ""))
+      location = paste("Capitals/",name, ".csv", sep = "")
       }
       else{
         name = input$statesTemp2
-        stateData = read.csv(paste("Capitals/",name, ".csv", sep = ""))
+        location = paste("Capitals/",name, ".csv", sep = "")
       }
       
-      stateData$weatherDate = as.Date(stateData$weatherDate)
+      print(location)
+      state = stateClean(location)
       
-      stateData$weatherMonth = months(stateData$weatherDate)
       
-      stateData$weatherMonth = factor(stateData$weatherMonth, levels = month.name)
-      
-      maxAvg = aggregate(stateData$weatherTempMax,list(stateData$weatherMonth), mean)
-      
-      names(maxAvg) = c("Month", "Temperature")
-      
-      minAvg = aggregate(stateData$weatherTempMin,list(stateData$weatherMonth), mean)
-      names(minAvg) = c("Month", "Temperature")
-      temp = cbind.data.frame(minAvg, maxAvg[,2])
-      names(temp) = c("Month", "Minimum","Maximum")
-      
-      temp <- melt(temp, id.vars="Month")
-      names(temp) = c("Month","TemperatureType","Temperature")
-      temp$TemperatureType = factor(temp$TemperatureType, levels = rev(levels(temp$TemperatureType)))
-      
-      ggplot(data = temp, aes(x = Month,y = Temperature, color = TemperatureType, group = TemperatureType)) + 
+      ggplot(data = state, aes(x = Month,y = Temperature, color = TemperatureType, group = TemperatureType)) + 
         geom_point(size = 2) +
         geom_line(size = 1.5) +
         scale_color_manual(values = c("red", "blue")) +
@@ -189,18 +174,79 @@ shinyServer(function(input, output, session) {
         ylim(c(0,110)) +
         theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
     })
-######################################################################################################
+
  
 #####################################Compare States###################################################
  
-
+ output$compareMax = renderPlot({
+   input$compareTemps
+   statesToCompare = input$compareTemps
+   validate(need(statesToCompare > 0, 'Please select at least one state.'))
+   location = paste("Capitals/",statesToCompare[1],".csv",sep = "")
+   state = stateClean(location)
+   stateFrame = state[which(state$TemperatureType == "Maximum"),]
+   stateFrame = stateFrame[,-2]
+   
+   if(length(statesToCompare)>1){
+   for(i in 2:length(statesToCompare)){
+     location = paste("Capitals/",statesToCompare[i],".csv",sep = "")
+     state = stateClean(location)
+     stateMax = state[which(state$TemperatureType == "Maximum"),]
+     stateMax = stateMax[,-2]
+     stateFrame = merge(stateFrame, stateMax, by = c("Month"))
+   
+   }}
+   names(stateFrame) = c("Month",statesToCompare)
+   stateFrame = melt(stateFrame, id.vars = c("Month"))
+   names(stateFrame) = c("Month","State","Temperature")
+   
+   
+   
+   ggplot(data = stateFrame, aes(x = Month, y = Temperature, color = State, group = State)) +
+     geom_line(size = 1.5) +
+     ggtitle(paste("Maximum Temperature Comparison")) + 
+     ylim(c(0,110)) +
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
+   
+ })
+ 
+ output$compareMin = renderPlot({
+   input$compareTemps
+   statesToCompare = input$compareTemps
+   validate(need(statesToCompare >0, ''))
+   location = paste("Capitals/",statesToCompare[1],".csv",sep = "")
+   state = stateClean(location)
+   stateFrame = state[which(state$TemperatureType == "Minimum"),]
+   stateFrame = stateFrame[,-2]
+   
+   if(length(statesToCompare)>1){
+   for(i in 2:length(statesToCompare)){
+     location = paste("Capitals/",statesToCompare[i],".csv",sep = "")
+     state = stateClean(location)
+     stateMin = state[which(state$TemperatureType == "Minimum"),]
+     stateMin = stateMin[,-2]
+     stateFrame = merge(stateFrame, stateMin, by = c("Month"))
+   }}
+   names(stateFrame) = c("Month",statesToCompare)
+   stateFrame = melt(stateFrame, id.vars = c("Month"))
+   names(stateFrame) = c("Month","State","Temperature")
+   
+   
+   
+   ggplot(data = stateFrame, aes(x = Month, y = Temperature, color = State, group = State)) +
+     geom_line(size = 1.5) +
+     ggtitle(paste("Minimum Temperature Comparison")) + 
+     ylim(c(0,110)) +
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
+   
+ })
  
  
  
 ######################################################################################################    
     
    
-    plotType = eventReactive(input$plotChoice, {
+  plotType = eventReactive(input$plotChoice, {
       
       validate(
         need(weatherValues$weather, '')
@@ -278,9 +324,7 @@ shinyServer(function(input, output, session) {
     })
   
   
- output$Nothing = renderPlot({
-   plot(0:10,0:10)
- })
+ 
  
   output$temperaturePlot = renderPlot({
     plotType()
