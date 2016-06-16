@@ -145,8 +145,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                                               
                                              
                                        column(8,
-                                              plotOutput("compareMax", width = "100%"),
-                                              plotOutput("compareMin", width = "100%"),
+                                              plotOutput("compareAvg", width = "100%"),
                                               plotOutput("compareHumidPlot", width = "100%")
                                        ))
                             )))

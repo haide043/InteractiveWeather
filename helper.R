@@ -344,6 +344,28 @@ stateClean = function(loc){
   return(temp)
 }
 
+stateAvgClean = function(loc){
+  stateData = read.csv(loc)
+  
+  stateData$weatherDate = as.Date(stateData$weatherDate)
+  stateData$weatherMonth = months(stateData$weatherDate)
+  stateData$weatherMonth = factor(stateData$weatherMonth, levels = month.name)
+  
+  maxAvg = aggregate(stateData$weatherTempMax,list(stateData$weatherMonth), mean)
+  names(maxAvg) = c("Month", "Temperature")
+  
+  minAvg = aggregate(stateData$weatherTempMin,list(stateData$weatherMonth), mean)
+  names(minAvg) = c("Month", "Temperature")
+  temp = cbind.data.frame(minAvg, maxAvg[,2])
+  names(temp) = c("Month", "Minimum","Maximum")
+  
+  temp$Average = (temp$Minimum + temp$Maximum)/2
+  
+  temp = temp[-c(2,3)]
+  names(temp) = c("Month","Average")
+  return(temp)
+}
+
 stateHumidClean = function(loc){
   stateData = read.csv(loc)
   

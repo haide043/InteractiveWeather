@@ -201,22 +201,18 @@ shinyServer(function(input, output, session) {
  
 #####################################Compare States###################################################
  
- output$compareMax = renderPlot({
+ output$compareAvg = renderPlot({
    input$compareTemps
    statesToCompare = input$compareTemps
    validate(need(statesToCompare > 0, 'Please select at least one state.'))
    location = paste("Capitals/",statesToCompare[1],".csv",sep = "")
-   state = stateClean(location)
-   stateFrame = state[which(state$TemperatureType == "Maximum"),]
-   stateFrame = stateFrame[,-2]
-   
+   stateFrame = stateAvgClean(location)
+
    if(length(statesToCompare)>1){
    for(i in 2:length(statesToCompare)){
      location = paste("Capitals/",statesToCompare[i],".csv",sep = "")
-     state = stateClean(location)
-     stateMax = state[which(state$TemperatureType == "Maximum"),]
-     stateMax = stateMax[,-2]
-     stateFrame = merge(stateFrame, stateMax, by = c("Month"))
+     state = stateAvgClean(location)
+     stateFrame = merge(stateFrame, state, by = c("Month"))
    
    }}
    names(stateFrame) = c("Month",statesToCompare)
@@ -227,42 +223,12 @@ shinyServer(function(input, output, session) {
    
    ggplot(data = stateFrame, aes(x = Month, y = Temperature, color = State, group = State)) +
      geom_line(size = 1.5) +
-     ggtitle(paste("Maximum Temperature Comparison")) + 
+     ggtitle(paste("Average Temperature Comparison")) + 
      ylim(c(0,110)) +
      theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
    
  })
- 
- output$compareMin = renderPlot({
-   input$compareTemps
-   statesToCompare = input$compareTemps
-   validate(need(statesToCompare >0, ''))
-   location = paste("Capitals/",statesToCompare[1],".csv",sep = "")
-   state = stateClean(location)
-   stateFrame = state[which(state$TemperatureType == "Minimum"),]
-   stateFrame = stateFrame[,-2]
-   
-   if(length(statesToCompare)>1){
-   for(i in 2:length(statesToCompare)){
-     location = paste("Capitals/",statesToCompare[i],".csv",sep = "")
-     state = stateClean(location)
-     stateMin = state[which(state$TemperatureType == "Minimum"),]
-     stateMin = stateMin[,-2]
-     stateFrame = merge(stateFrame, stateMin, by = c("Month"))
-   }}
-   names(stateFrame) = c("Month",statesToCompare)
-   stateFrame = melt(stateFrame, id.vars = c("Month"))
-   names(stateFrame) = c("Month","State","Temperature")
-   
-   
-   
-   ggplot(data = stateFrame, aes(x = Month, y = Temperature, color = State, group = State)) +
-     geom_line(size = 1.5) +
-     ggtitle(paste("Minimum Temperature Comparison")) + 
-     ylim(c(0,110)) +
-     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
-   
- })
+
  
  
  output$compareHumidPlot = renderPlot({
@@ -283,7 +249,7 @@ shinyServer(function(input, output, session) {
    
    ggplot(data = stateFrame, aes(x = Month, y = Humidity, color = State, group = State)) +
      geom_line(size = 1.5) +
-     ggtitle(paste("Minimum Temperature Comparison")) + 
+     ggtitle(paste("Humididty Comparison")) + 
      ylim(c(0,1)) +
      theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
    
