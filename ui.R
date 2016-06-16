@@ -83,9 +83,12 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                             
                             ),
                    tabPanel("Choosing a State to Live in",
+                            tabsetPanel(
+                              tabPanel("View Inidivual States",
                             fluidRow(
                               column(12,
-                                     titlePanel(h1(strong("Pick a Capital based on Weather"), align = "center")))),
+                                     titlePanel(h1(strong("Choose a Capital to see Average Yearly Weather"), align = "center")))),
+                            hr(),
                             fluidRow(
                               column(4,style = "background-color:#D3D3D3; color:#000000;",
                                      radioButtons("statesTemp", label = h3(""), 
@@ -113,9 +116,39 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                             )),
                             column(4,
                                    plotOutput("stateTempPlot", width = "100%")
-                            ))
-                                                         
+                            ))),
+                            tabPanel("Compare States",
+                                     fluidRow(
+                                       column(12,
+                                              titlePanel(h1(strong("Choose a Capital to see Average Yearly Weather"), align = "center")))),
+                                     hr(),
+                                     fluidRow(
+                                       column(4,style = "background-color:#D3D3D3; color:#000000;",
+                                              checkboxGroupInput("statesTemp3", label = h3(""), 
+                                                           choices = list("Montgomery, Alabama" = "Alabama",  "Juneau, Alaska" = "Alaska",  "Phoenix, Arizona" = "Arizona",
+                                                                          "Little Rock, Arkansas" = "Arkansas",  "Sacramento, California" = "California",  "Denver, Colorado" = "Colorado",
+                                                                          "Hartford, Connecticut" = "Connecticut",  "Dover, Delaware" = "Delaware",  "Tallahassee, Florida" = "Florida", 
+                                                                          "Atlanta, Georgia" = "Georgia",  "Honolulu, Hawaii" = "Hawaii",  "Boise, Idaho" = "Idaho",  "Springfield, Illinois" = "Illinois",
+                                                                          "Indianapolis, Indiana" = "Indiana",  "Des Moines, Iowa" = "Iowa",  "Topeka, Kansas" = "Kansas",  "Frankfort, Kentucky" = "Kentucky",
+                                                                          "Baton Rouge, Louisiana" = "Louisiana",  "Augusta, Maine" = "Maine",  "Annapolis, Maryland" = "Maryland",  "Boston, Massachusetts" = "Massachusetts",
+                                                                          "Lansing, Michigan" = "Michigan",  "St. Paul, Minnesota" = "Minnesota",  "Jackson, Mississippi" = "Mississippi",  "Jefferson City, Missouri" = "Missouri",
+                                                                          "Helena, Montana" = "Montana","Lincoln, Nebraska" = "Nebraska",  "Carson City, Nevada" = "Nevada",  "Concord, New Hampshire" = "New Hampshire",
+                                                                          "Trenton, New Jersey" = "New Jersey",  "Santa Fe, New Mexico" ="New Mexico",  "Albany, New York" = "New York",  "Raleigh, North Carolina" = "North Carolina",
+                                                                          "Bismarck, North Dakota" = "North Dakota",  "Columbus, Ohio" = "Ohio",  "Oklahoma City, Oklahoma" = "Oklahoma",  "Salem, Oregon" = "Oregon",  "Harrisburg, Pennsylvania" = "Pennsylvania",
+                                                                          "Providence, Rhode Island" = "Rhode Island",  "Columbia, South Carolina" = "South Carolina",  "Pierre, South Dakota" = "South Dakota",  "Nashville, Tennessee" = "Tennessee",
+                                                                          "Austin, Texas" = "Texas",  "Salt Lake City, Utah" = "Utah",  "Montpelier, Vermont" = "Vermont",  "Richmond, Virginia" = "Virgina",  "Olympia, Washington" = "Washington",
+                                                                          "Charleston, West Virginia" = "West Virginia",  "Madison, Wisconsin" = "Wisconsin",  "Cheyenne, Wyoming" = "Wyoming"
+                                                                          
+                                                                          
+                                                           ),selected = c("Minnesota","Hawaii"), width = "800px")),
+                                              
+                                             
+                                       column(8,
+                                              plotOutput("compareStates", width = "100%")
+                                       ))
                             )))
+                                                         
+                            ))
 
 
 

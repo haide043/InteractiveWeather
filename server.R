@@ -149,6 +149,7 @@ shinyServer(function(input, output, session) {
 
  }) 
  
+ ##################Individual State Temp###################################################
     output$stateTempPlot = renderPlot({
       input$statesTemp #this is forcing the plot to wait until the inputs have been completed.
       input$statesTemp2
@@ -188,6 +189,15 @@ shinyServer(function(input, output, session) {
         ylim(c(0,110)) +
         theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
     })
+######################################################################################################
+ 
+#####################################Compare States###################################################
+ 
+
+ 
+ 
+ 
+######################################################################################################    
     
    
     plotType = eventReactive(input$plotChoice, {
@@ -268,7 +278,10 @@ shinyServer(function(input, output, session) {
     })
   
   
-  
+ output$Nothing = renderPlot({
+   plot(0:10,0:10)
+ })
+ 
   output$temperaturePlot = renderPlot({
     plotType()
   })
