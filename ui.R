@@ -116,7 +116,7 @@ shinyUI(navbarPage(theme ="bootstrap.css", "Weather Interactive",
                             )),
                             column(4,
                                    plotOutput("stateTempPlot", width = "100%"),
-                                   plotOutput("stateHumidPlot", width = "100%")
+                                   plotOutput("stateHumidPlot", width = "87.5%")
                             ))),
                             tabPanel("Compare States",
                                      fluidRow(
