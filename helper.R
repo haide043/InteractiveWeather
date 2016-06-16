@@ -254,7 +254,8 @@ clat = NULL
 clng = NULL
 
 TemperatureTheme <- theme_grey() + theme(plot.title = element_text(family = "Times", face = "bold", colour = "Black", size = rel(2)), 
-                                         axis.title = element_text(family = "Times", size= rel(2)), plot.background = element_rect(fill = "grey"))
+                                         axis.title = element_text(family = "Times", size= rel(2)), plot.background = element_rect(fill = "grey"),
+                                         axis.text=element_text(size=12))
 
 rainIcon <- makeIcon(
   iconUrl = "http://pix.iemoji.com/twit33/0564.png",

@@ -5,6 +5,8 @@ library(ggmap)
 library(reshape2)
 library(ggplot2)
 library(DT)
+library(chron)
+library(scales)
 source('helper.R')
 
 shinyServer(function(input, output, session) {  
@@ -171,7 +173,7 @@ shinyServer(function(input, output, session) {
         scale_color_manual(values = c("red", "blue")) +
         ggtitle(paste(name, "Yearly Weather")) + 
         ylim(c(0,110)) +
-        theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
+        theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"),axis.text.y=element_text(size=12),axis.title=element_text(size=14,face="bold")) 
     })
 
 ##################################################################################################
@@ -195,8 +197,9 @@ shinyServer(function(input, output, session) {
      geom_point(size = 2, color = "orange") +
      geom_line(size = 1.5, color = "orange") +
      ggtitle(paste(name, "Yearly Humidity")) + 
-     ylim(c(0,1)) +
-     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold")) 
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"),axis.text.y=element_text(size=12),axis.title=element_text(size=14,face="bold")) +
+     scale_y_continuous(labels= percent, limits = c(0,1)) 
+
  })
  
 #####################################Compare States###################################################
@@ -225,7 +228,7 @@ shinyServer(function(input, output, session) {
      geom_line(size = 1.5) +
      ggtitle(paste("Average Temperature Comparison")) + 
      ylim(c(0,110)) +
-     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"),axis.text.y=element_text(size=12),axis.title=element_text(size=14,face="bold"))
    
  })
 
@@ -250,8 +253,8 @@ shinyServer(function(input, output, session) {
    ggplot(data = stateFrame, aes(x = Month, y = Humidity, color = State, group = State)) +
      geom_line(size = 1.5) +
      ggtitle(paste("Humididty Comparison")) + 
-     ylim(c(0,1)) +
-     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"))
+     theme(legend.title=element_blank(), plot.title = element_text(size = 20, face="bold"), axis.text.y=element_text(size=12),axis.title=element_text(size=14,face="bold"))+
+     scale_y_continuous(labels= percent, limits = c(0,1)) 
    
  })
  
@@ -272,6 +275,8 @@ shinyServer(function(input, output, session) {
           need("wind" %in% input$plotChoice, 'Select Wind speed as a varaible!')
         )
         weatherData = weatherValues$weather
+        cleanDate = month.day.year(weatherData$weatherDate)
+        weatherData$weatherDate = paste(cleanDate$month, cleanDate$day, sep = "/")
         
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherWindSpeed, colour = "Wind Speed")) +
@@ -285,11 +290,15 @@ shinyServer(function(input, output, session) {
           need("humid" %in% input$plotChoice, 'Select humidity as a varaible!')
         )
         weatherData = weatherValues$weather
+        cleanDate = month.day.year(weatherData$weatherDate)
+        weatherData$weatherDate = paste(cleanDate$month, cleanDate$day, sep = "/")
         
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherHumidity, colour = "Humidity")) +
           labs(x = "\nDate", y = "Humidity\n",title = paste("Humidity for the",input$timeSelect, "Days")) +
-          TemperatureTheme + scale_color_discrete(name = "Humidity")
+          TemperatureTheme + scale_color_discrete(name = "Humidity") +
+          scale_y_continuous(labels= percent, limits = c(0,1)) 
+
       })
       
       
@@ -298,9 +307,11 @@ shinyServer(function(input, output, session) {
           need("precip" %in% input$plotChoice, 'Select precipitation as a varaible!')
         )
         weatherData = weatherValues$weather
+        cleanDate = month.day.year(weatherData$weatherDate)
+        weatherData$weatherDate = paste(cleanDate$month, cleanDate$day, sep = "/")
         
         ggplot(weatherData, aes(weatherDate, group = 2))+
-          geom_line(aes(y = weatherPrecip, colour = "Precipitation per Hour")) +
+          geom_line(aes(y = weatherPrecip, colour = "Inches per Hour")) +
           labs(x = "\nDate", y = "Precipitation\n",title = paste("Precipitation for the",input$timeSelect,"Days")) +
           TemperatureTheme + scale_color_discrete(name = "Precipitation")
       })
@@ -312,11 +323,13 @@ shinyServer(function(input, output, session) {
           need("temp" %in% input$plotChoice, 'Select temperature as a varaible!')
         )   
         weatherData = weatherValues$weather
+        cleanDate = month.day.year(weatherData$weatherDate)
+        weatherData$weatherDate = paste(cleanDate$month, cleanDate$day, sep = "/")
         
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherTempMax, colour = "Maximum")) +
           geom_line(aes(y = weatherTempMin, colour = "Minimum")) +
-         # labs(x = "\nDate", y = "Temperature\n",title = paste("Temperature for the",input$timeSelect, "Days")) +
+          labs(x = "\nDate", y = "Temperature\n",title = paste("Temperature for the",input$timeSelect, "Days")) +
           TemperatureTheme + scale_color_discrete(name = "Temperature")
       })
       
@@ -326,11 +339,14 @@ shinyServer(function(input, output, session) {
           need("ozone" %in% input$plotChoice, 'Select Ozone Levels as a varaible!')
         )  
         weatherData = weatherValues$weather
+        cleanDate = month.day.year(weatherData$weatherDate)
+        weatherData$weatherDate = paste(cleanDate$month, cleanDate$day, sep = "/")
         
         ggplot(weatherData, aes(weatherDate, group = 2))+
           geom_line(aes(y = weatherOzone, colour = "Ozone")) +
           labs(x = "\nDate", y = "Ozone\n",title = paste("Ozone levels for the",input$timeSelect,"Days")) +
-          TemperatureTheme + scale_color_discrete(name = "Ozone")
+          TemperatureTheme + scale_color_discrete(name = "Ozone") 
+          
       })
       
       
