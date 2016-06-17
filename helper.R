@@ -200,7 +200,7 @@ last7Days = function(latitude, longitude){
   currentTime = c(as.numeric(as.POSIXct(Sys.time(),format="%m/%d/%Y")))
   epoch = 24*60*60
   currentTime = currentTime + epoch
-  for(i in 1:2){
+  for(i in 1:7){
     newDay = currentTime[i] - epoch
     currentTime = append(currentTime, newDay)
     weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/",darkForecastAPIKey,"/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))
@@ -217,7 +217,7 @@ last30Days = function(latitude, longitude){
   currentTime = c((as.POSIXct(Sys.time())))
   epoch = 24*60*60
   currentTime = currentTime + epoch
-  for(i in 1:3){
+  for(i in 1:30){
     newDay = currentTime[i] - epoch
     currentTime = append(currentTime, newDay)
     weatherJSON = getURL(url = paste("https://api.forecast.io/forecast/",darkForecastAPIKey,"/",latitude, ",",longitude,",",as.integer(currentTime[i]), sep=""))

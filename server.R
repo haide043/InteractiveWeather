@@ -336,7 +336,8 @@ shinyServer(function(input, output, session) {
       
       output$ozonePlot = renderPlot({
         validate(
-          need("ozone" %in% input$plotChoice, 'Select Ozone Levels as a varaible!')
+          need("ozone" %in% input$plotChoice, 'Select Ozone Levels as a varaible!'),
+          need(nrow(weatherValues$weather) <30, strong('Sorry, ozone levels are not avaliable for the last 30 days.'))
         )  
         weatherData = weatherValues$weather
         cleanDate = month.day.year(weatherData$weatherDate)
